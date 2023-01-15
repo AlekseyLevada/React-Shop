@@ -1,0 +1,1 @@
+export {GoodList} from './good_list'
