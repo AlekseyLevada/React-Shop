@@ -1,9 +1,33 @@
 import React from 'react'
 
-export function Menu() {
-    return(
+// interface iMenu3{
+//     icon: string,
+//     text: string,
+//     link:string,
+
+// interface iMenu2{
+//     buttons: iMenu3,
+//     links: [],
+// }
+
+// interface iMenu3{
+//     buttons:[],
+//     links: [],
+// }
+
+export function Menu({ menu: { links, buttons } }: any) {
+    return (
         <>
-            Меню
+            <div>
+                {
+                    links.map((link: any) => <>{link.text}</>)
+                }
+            </div>
+            <div>
+                {
+                    buttons.map((button: any) => <>{button.text}</>)
+                }
+            </div>
         </>
     )
 }

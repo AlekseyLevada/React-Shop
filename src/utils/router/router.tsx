@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"
+import { GoodList } from "../../components/good_list"
 import { MainLayout } from "../../components/main_layout"
 import { Main } from "../../pages/main"
 
@@ -8,8 +9,15 @@ export const Router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Main />
+                element: <Main />,
+                children: [
+                    {
+                        index: true,
+                        element: < GoodList />
+                    }
+                ]
             },
-]}
+        ]
+    }
 
 ])
