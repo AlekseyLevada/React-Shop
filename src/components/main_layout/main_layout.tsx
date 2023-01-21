@@ -11,23 +11,25 @@ export function MainLayout() {
                     link: '/',
                 },
                 {
-                    text: 'Товары',
+                    text: 'О нас',
                     link: '/goods',
                 },
                 {
-                    text: 'Пользователи',
+                    text: 'Контакты',
                     link: '/users',
-                },
-                {
-                    text: 'Отзывы',
-                    link: '/reviews',
-                },
-                {
-                    text: 'Корзина',
-                    link: '/basket',
                 },
             ],
             buttons: [
+                {
+                    icon: 'https://img.icons8.com/fluency/512/shopping-cart-loaded.png',
+                    text: 'Регистрация',
+                    link: '/registration',
+                },
+                {
+                    icon: 'https://img.icons8.com/fluency/512/shopping-cart-loaded.png',
+                    text: 'Авторизация',
+                    link: '/auth',
+                },
                 {
                     icon: 'https://img.icons8.com/fluency/512/shopping-cart-loaded.png',
                     text: 'Корзина',

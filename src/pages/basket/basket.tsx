@@ -4,7 +4,7 @@ export function Basket() {
     return(
         <>
             <h1>
-                BASKET
+                Страница Корзины
             </h1>
         </>
     )

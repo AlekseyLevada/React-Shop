@@ -1,0 +1,13 @@
+[
+    {
+        "ID": "2557f654-b251-4cd7-bd6e-f722b9e709cb",
+        "NAME": "INordic",
+        "SURNAME": "IT",
+        "IMG": "no_image",
+        "EMAIL": "INordic@gmail.ru",
+        "PHONE": "+7123456780",
+        "LOGIN": "login",
+        "PASSWORD": "pass",
+        "ROLE": "admin"
+    }
+]
