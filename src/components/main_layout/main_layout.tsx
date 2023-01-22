@@ -41,7 +41,7 @@ export function MainLayout() {
 
     return (
         <div className='main__layout'>
-            <Menu menu={menu}/>
+            <Menu menu={menu} />
             <Outlet />
         </div>
     )

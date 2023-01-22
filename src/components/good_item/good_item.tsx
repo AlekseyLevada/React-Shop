@@ -1,10 +1,10 @@
 import React from 'react'
 
-export function GoodItem(){
+export function GoodItem({data}: any){
     return(
         <>
             <h1>
-                GOODITEM
+                {data.TITLE}
             </h1>
         </>
     )

@@ -1,11 +1,11 @@
 import React from 'react'
 
 export function Basket() {
-    return(
+    return (
         <>
-            <h1>
-                Страница Корзины
-            </h1>
+            <h2>
+                Корзина
+            </h2>
         </>
     )
 }
