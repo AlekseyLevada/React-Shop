@@ -1,2 +1,2 @@
-export { HelloBlock } from './hello-block'
-export { SearchBlock } from './search-block'
+export { HelloBlock } from './hello_block'
+export { SearchBlock } from './search_block'
