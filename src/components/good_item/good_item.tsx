@@ -1,6 +1,4 @@
-import React from 'react'
-
-export function GoodItem({data}: any){
+export function GoodItem({data}: any) : JSX.Element {
     return(
         <>
             <h1>

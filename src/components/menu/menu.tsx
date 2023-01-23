@@ -1,10 +1,9 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { StyledMenu, StyledList } from './style'
 import { iMenu, buttonsAndLinks } from './types'
 
-export function Menu({ menu: { buttons, links } }: iMenu) : JSX.Element{
+export function Menu({ menu: { buttons, links } }: iMenu) : JSX.Element { 
     return (
         <StyledMenu>
             <StyledList>

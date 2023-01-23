@@ -1,6 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import { HelloBlock } from './components'
-import { SearchBlock } from './components'
+import { HelloBlock, SearchBlock } from './components'
 
 export function Main() : JSX.Element {
     return (

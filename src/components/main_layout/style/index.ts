@@ -1,0 +1,1 @@
+export { StyledMainLayout } from './main_layout.style' 

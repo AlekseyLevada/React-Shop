@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import { StyledMainLayout } from './style'
+import { useState } from 'react'
 import { Menu } from '../menu'
 import { Outlet } from 'react-router-dom'
 
-export function MainLayout() {
+export function MainLayout() : JSX.Element {
     const [menu, setMenu] = useState(
         {
             links: [
@@ -40,9 +41,9 @@ export function MainLayout() {
     )
 
     return (
-        <div className='main__layout'>
+        <StyledMainLayout>
             <Menu menu={menu} />
             <Outlet />
-        </div>
+        </StyledMainLayout>
     )
 }

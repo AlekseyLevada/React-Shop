@@ -1,4 +1,5 @@
-import { buttonsAndLinks } from "./buttons-and-links"
+import { buttonsAndLinks } from "./buttons_and_links"
+
 export interface iMenu {
     menu: {
         buttons: buttonsAndLinks[]

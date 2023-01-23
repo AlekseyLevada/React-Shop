@@ -1,2 +1,2 @@
-export { StyledList } from './styled-list.style'
-export { StyledMenu } from './styled-menu.style'
+export { StyledList } from './styled_list'
+export { StyledMenu } from './styled_menu'

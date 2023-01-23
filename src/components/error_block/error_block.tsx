@@ -1,6 +1,4 @@
-import React from "react"
-
-export function ErrorBlock() {
+export function ErrorBlock() : JSX.Element {
     return(
         <>
             ERROR BLOCK

@@ -1,7 +1,7 @@
-export function SearchBlock() : JSX.Element{
+export function SearchBlock() : JSX.Element {
     return(
-        <>
-            <input type='text'/>
-        </>
+        <form encType="multipart/form-data" method='post'>
+            <input type='text' defaultValue='Поиск' name='search'/>
+        </form>
     )
 }

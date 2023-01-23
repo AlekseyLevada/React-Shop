@@ -1,1 +1,1 @@
-export {GoodList} from './good_list'
+export { GoodList } from './good_list'

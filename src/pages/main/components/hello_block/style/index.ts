@@ -1,0 +1,1 @@
+export { StyledHelloBlock } from './styled_hello_block'
