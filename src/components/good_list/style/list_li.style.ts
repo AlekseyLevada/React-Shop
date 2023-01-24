@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const StyledListLi = styled.li`
+export const StyledListLi = styled.div`
     outline: 2px solid #2A284F;
     padding: 25px;
     margin: 20px;

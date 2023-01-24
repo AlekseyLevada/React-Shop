@@ -5,11 +5,13 @@ export const StyledList = styled.ul<iStyledList>`
     list-style: none;
     display: flex;
 li {
-    border-bottom: 1px solid #fff;
+    transition: .3s;
+    border-bottom: 2px solid #fff;
     margin: 0px 3px;
     margin-right: ${p => p.type === 'buttons' ? '25px' : '5px'};
         &:hover {
-            border-bottom: 1px solid #FFCA05;
+            transition: .3s;
+            border-bottom: 2px solid #FFCA05;
     }
         a {
             text-decoration: none;

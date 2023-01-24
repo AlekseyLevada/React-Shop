@@ -1,6 +1,6 @@
 import { StyledMainLayout } from './style'
 import { useState } from 'react'
-import { Menu } from '../menu'
+import { Navbar } from '../navbar'
 import { Outlet } from 'react-router-dom'
 
 export function MainLayout() : JSX.Element {
@@ -42,7 +42,7 @@ export function MainLayout() : JSX.Element {
 
     return (
         <StyledMainLayout>
-            <Menu menu={menu} />
+            <Navbar menu={menu} />
             <Outlet />
         </StyledMainLayout>
     )

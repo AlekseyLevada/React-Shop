@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
-import { StyledMenu, StyledList } from './style'
-import { iMenu, buttonsAndLinks } from './types'
+import { StyledNavbar, StyledList } from './style'
+import { iNavbar, buttonsAndLinks } from './types'
 
-export function Menu({ menu: { buttons, links } }: iMenu) : JSX.Element { 
+export function Navbar({ menu: { buttons, links } }: iNavbar) : JSX.Element { 
     return (
-        <StyledMenu>
+        <StyledNavbar>
             <StyledList>
                 {
                     links.map((link: buttonsAndLinks, index: number) =>
@@ -26,6 +26,6 @@ export function Menu({ menu: { buttons, links } }: iMenu) : JSX.Element {
                         </li>)
                 }
             </StyledList>
-        </StyledMenu>
+        </StyledNavbar>
     )
 }
