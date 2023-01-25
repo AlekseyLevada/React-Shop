@@ -1,6 +1,6 @@
 import { StyledHelloBlock } from "./style"
 
-export function HelloBlock() {
+export function HelloBlock() : JSX.Element {
     return(
         <StyledHelloBlock>
             <h1>

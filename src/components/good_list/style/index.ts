@@ -1,2 +1,2 @@
-export { StyledListUl } from './list_ul.style'
-export { StyledListLi } from './list_li.style'
+export { StyledGoodListContainer } from './styled_good_list_container.style'
+export { StyledGoodListItem } from './styled_good_list_item.style'

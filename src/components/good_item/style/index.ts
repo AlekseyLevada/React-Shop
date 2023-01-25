@@ -1,1 +1,1 @@
-export { StyledGoodItem } from './styled_good_item'
+export { StyledGoodItem } from './styled_good_item.style'

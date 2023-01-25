@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom"
-import { GoodList } from "../../components/good_list"
 import { MainLayout } from "../../components/main_layout"
 import { Main } from "../../pages/main"
-import { Basket } from "../../pages/basket"
+import { GoodList } from "../../components/good_list"
 import { GoodItem } from '../../components/good_item'
+import { Basket } from "../../pages/basket"
+
 
 export const Router = createBrowserRouter([
     {

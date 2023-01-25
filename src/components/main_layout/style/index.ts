@@ -1,1 +1,1 @@
-export { StyledMainLayout } from './main_layout.style' 
+export { StyledMainLayout } from './styled_main_layout.style' 
