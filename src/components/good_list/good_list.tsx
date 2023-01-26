@@ -10,7 +10,7 @@ export function GoodList(): JSX.Element {
     return (
         <StyledGoodListContainer>
             {
-                goodsJSON.map((good: iGood, index: number) => <StyledGoodListItem key={good.TITLE+index}>
+                goodsJSON.map((good: iGood, index: number) => <StyledGoodListItem key={good.ID+index}>
                     <Link to={`/goods/${good.ID}`}>
                         {good.TITLE}
                     </Link>

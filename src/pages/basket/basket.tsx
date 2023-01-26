@@ -1,4 +1,4 @@
-export function Basket() {
+export function Basket() : JSX.Element {
     return (
         <>
             <h2>

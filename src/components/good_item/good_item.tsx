@@ -13,12 +13,6 @@ export function GoodItem({data}: any) : JSX.Element {
             <p>
                 Колличество на складе {data.COUNT}
             </p>
-
-            <>
-                <button>Подробнее</button>
-                <button>В корзину</button>
-            </>
-
         </StyledGoodItem>
     )
 }

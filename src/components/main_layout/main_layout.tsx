@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Navbar } from '../navbar'
 import { Outlet } from 'react-router-dom'
 
-export function MainLayout() : JSX.Element {
+export function MainLayout(): JSX.Element {
     const [menu, setMenu] = useState(
         {
             links: [
