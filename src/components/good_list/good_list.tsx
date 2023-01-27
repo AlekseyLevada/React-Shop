@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import { Link } from 'react-router-dom'
 
 import { StyledGoodListItem, StyledGoodListContainer } from './style'
 import { iGood } from './types'
@@ -10,11 +9,8 @@ export function GoodList(): JSX.Element {
     return (
         <StyledGoodListContainer>
             {
-                goodsJSON.map((good: iGood, index: number) => <StyledGoodListItem key={good.ID+index}>
-                    <Link to={`/goods/${good.ID}`}>
-                        {good.TITLE}
-                    </Link>
-                    <GoodItem data={good} />
+                goodsJSON.map((good: iGood, index: number) => <StyledGoodListItem key={good.ID + index}>
+                        <GoodItem data={good} />
                 </StyledGoodListItem>) as JSX.Element[] | ReactNode
             }
         </StyledGoodListContainer>
