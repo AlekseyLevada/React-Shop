@@ -13,11 +13,11 @@ export function MainLayout(): JSX.Element {
                 },
                 {
                     text: 'О нас',
-                    link: '/goods',
+                    link: '/about',
                 },
                 {
                     text: 'Контакты',
-                    link: '/users',
+                    link: '/contacts',
                 },
             ],
             buttons: [

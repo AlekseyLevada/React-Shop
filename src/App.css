@@ -8,6 +8,7 @@ button {
     cursor: pointer;
     border:2px solid #2A284F;
     padding: 10px;
+    margin: 0px 10px;
     border-radius: 3px;
     box-shadow: inset 0px 0px 5px #2A284F;
     background: -webkit-linear-gradient(90deg, #0692FE,#2FC5D7,#65FBAA);

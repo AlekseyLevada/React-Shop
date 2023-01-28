@@ -8,8 +8,8 @@ export const slice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-        .addCase('ADD_TO_BASKET', (state, action: iPayload) => {
-            state.basket.push(action.payload)
-        })
+            .addCase('ADD_TO_BASKET', (state, action: iPayload) => {
+                state.basket.push(action.payload)
+            })
     }
 })

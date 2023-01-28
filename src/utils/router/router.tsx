@@ -1,9 +1,11 @@
 import { createBrowserRouter } from "react-router-dom"
+
 import { MainLayout } from "../../components/main_layout"
 import { GoodList } from "../../components/good_list"
-import { GoodItem } from '../../components/good_item'
 
 import { Main } from "../../pages/main"
+import { AboutPage } from '../../pages/about'
+import { ContactsPage } from '../../pages/contacts'
 import { Basket } from "../../pages/basket"
 import { DetailedGood } from '../../pages/detailed_good'
 
@@ -21,16 +23,24 @@ export const Router = createBrowserRouter([
                         index: true,
                         element: < GoodList />
                     },
-                    {
-                        path: '/goods/:id',
-                        element: < DetailedGood />
-                    },
                 ]
+            },
+            {
+                path: '/goods/:id',
+                element: < DetailedGood />
             },
             {
                 path: '/basket',
                 element: <Basket />
-            }
+            },
+            {
+                path: '/about',
+                element: <AboutPage />
+            },
+            {
+                path: '/contacts',
+                element: <ContactsPage />
+            },
         ]
     }
 

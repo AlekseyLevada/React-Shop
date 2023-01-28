@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { iGood } from '../../components/good_list/types'
 import goodsJSON from '../../stub/goods.json'
+import { StyledDetailedGoodContainer } from './style'
 import { useAppDispatch } from '../../store'
 import { createExtraActions } from '../../store/actions/goods'
 
@@ -14,6 +15,7 @@ export function DetailedGood(): JSX.Element {
         PRICE: '',
         IMG: '',
     })
+
     const { id } = useParams()
     const { addToBasket } = createExtraActions()
     const dispatch = useAppDispatch()
@@ -25,13 +27,14 @@ export function DetailedGood(): JSX.Element {
     }, [])
 
     return (
-        <>
+        <StyledDetailedGoodContainer>
             <img src={good.IMG} alt="good_image" />
             <p>{good.TITLE}</p>
             <p>{good.DISCR}</p>
             <p>{good.PRICE}</p>
             <p>{good.COUNT}</p>
-            <button onClick={ () => dispatch(addToBasket(good))}>Добавить в корзину</button>
-        </>
+            <Link to={`/`}><button>Назад к списку</button></Link>
+            <button onClick={() => dispatch(addToBasket(good))}>Добавить в корзину</button>
+        </StyledDetailedGoodContainer>
     )
 }

@@ -1,1 +1,1 @@
-export {} from ''
+export { StyledDetailedGoodContainer } from './styled_detailed_good.style'
