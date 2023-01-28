@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
-import { StyledGoodItem, StyledButtonContainer } from './style'
+import { StyledGoodItem, StyledButtonContainer, StyledImg, StyledTitle } from './style'
 
-export function GoodItem({data}: any) : JSX.Element {
+export function GoodItem({ data }: any): JSX.Element {
     return (
         <StyledGoodItem>
-            <h2>
+            <StyledTitle>
                 {data.TITLE}
-            </h2>
-            <img src={data.IMG} alt="product_image"/>
+            </StyledTitle>
+            <StyledImg src={data.IMG} alt="product_image" />
             <p>
                 Арттикул {data.ID}
             </p>

@@ -1,0 +1,1 @@
+export { DetailedGood } from './detailed_good'
