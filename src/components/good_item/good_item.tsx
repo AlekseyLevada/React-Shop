@@ -9,9 +9,6 @@ export function GoodItem({ data }: any): JSX.Element {
             </StyledTitle>
             <StyledImg src={data.IMG} alt="product_image" />
             <p>
-                Арттикул {data.ID}
-            </p>
-            <p>
                 {data.DISCR}
             </p>
             <p>
