@@ -11,7 +11,7 @@ export interface iReduxGoodsState {
     }
 }
 
-export function Navbar({ menu: { buttons, links } }: iNavbar) : JSX.Element {
+export function Navbar({ menu: { buttons, links } }: iNavbar): JSX.Element {
 
     const basket: any = useSelector<iReduxGoodsState>(state => state.goods.basket)
 
@@ -27,6 +27,9 @@ export function Navbar({ menu: { buttons, links } }: iNavbar) : JSX.Element {
                         </li>)
                 }
             </StyledList>
+            <h1>
+                iNordic-Shool<span>.</span>
+            </h1>
             <StyledList type='buttons'>
                 {
                     buttons.map((button: buttonsAndLinks, index: number) =>
