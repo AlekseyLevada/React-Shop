@@ -6,7 +6,7 @@ export function createExtraActions() {
     function addToBasket(good: any) {
         return {
             type: 'ADD_TO_BASKET',
-            payload: { good }
+            payload: { ...good }
         }
     }
 }

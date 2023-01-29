@@ -1,7 +1,9 @@
 export function AboutPage(): JSX.Element {
     return(
         <>
-            <h1>О Нас</h1>
+            <h2>
+                О Нас
+            </h2>
         </>
     )
 }

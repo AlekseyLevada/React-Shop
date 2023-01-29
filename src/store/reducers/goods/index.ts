@@ -1,1 +1,1 @@
-export {} from ''
+export { createExtraReducers } from './goods'

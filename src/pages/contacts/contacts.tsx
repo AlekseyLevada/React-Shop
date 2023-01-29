@@ -1,9 +1,9 @@
 export function ContactsPage(): JSX.Element {
     return(
         <>
-            <h1>
+            <h2>
                 Контакты
-            </h1>
+            </h2>
         </>
     )
 }

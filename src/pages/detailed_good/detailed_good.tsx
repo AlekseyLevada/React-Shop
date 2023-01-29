@@ -18,8 +18,8 @@ export function DetailedGood(): JSX.Element {
 
     const { id } = useParams()
     const { addToBasket } = createExtraActions()
+    
     const dispatch = useAppDispatch()
-    console.log(addToBasket)
 
     useEffect(() => {
         const good = goodsJSON.find((good: iGood) => good.ID === id) as iGood
