@@ -7,7 +7,7 @@ position: relative;
     justify-content: space-between;
     align-items: center;
     background-color: #2A284F;
-    color: #FFCA05;
+    color: #fcbf74;
     font-size: 14px;
     font-weight: bold;
     list-style: none;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const StyledImg = styled.img`
-    width: 150px;
-    outline: 2px solid #2A284F;
+    width: 200px;
     border-radius: 3px;
+    border-radius: 5px;
+    margin: 10px;
 `

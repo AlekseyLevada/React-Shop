@@ -6,12 +6,12 @@ export const StyledList = styled.ul<iStyledList>`
     display: flex;
 li {
     transition: .3s;
-    border-bottom: 2px solid #fff;
+    border-bottom: 3px solid #fff;
     margin: 0px 3px;
     margin-right: ${p => p.type === 'buttons' ? '25px' : '5px'};
         &:hover {
             transition: .3s;
-            border-bottom: 2px solid #FFCA05;
+            border-bottom: 3px solid #fcbf74;
     }
         a {
             text-decoration: none;
@@ -24,7 +24,7 @@ li {
             `
         :
         css`
-                color: #FFCA05;
+                color: #fcbf74;
             `
     }
     }

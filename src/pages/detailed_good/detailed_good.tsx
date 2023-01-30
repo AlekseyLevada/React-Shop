@@ -17,7 +17,9 @@ export function DetailedGood(): JSX.Element {
     })
 
     const { id } = useParams()
+
     const dispatch = useAppDispatch()
+    
     const { addToBasket } = createExtraActions()
 
     useEffect(() => {

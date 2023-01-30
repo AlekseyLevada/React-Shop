@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom'
 import { StyledGoodItem, StyledButtonContainer, StyledImg, StyledTitle } from './style'
+import { createExtraActions } from '../../store/actions/goods'
+import { useAppDispatch } from '../../store'
 
 export function GoodItem({ data }: any): JSX.Element {
+
+    const dispatch = useAppDispatch()
+    const { addToBasket } = createExtraActions()
+    
     return (
         <StyledGoodItem>
             <StyledTitle>
@@ -20,7 +26,7 @@ export function GoodItem({ data }: any): JSX.Element {
                         Подробнее
                     </button>
                 </Link>
-                <button>
+                <button onClick={ () => dispatch(addToBasket(data))}>
                     В корзину
                 </button>
             </StyledButtonContainer>

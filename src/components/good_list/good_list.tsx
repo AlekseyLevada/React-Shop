@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { StyledGoodListItem, StyledGoodListContainer } from './style'
 import { iGood, iGoods } from './types'
 import { GoodItem } from '../good_item'
-// import goodsJSON from '../../stub/goods.json'
 import { createExtraActions } from '../../store/actions/goods'
 
 export interface iReduxGoodsState {

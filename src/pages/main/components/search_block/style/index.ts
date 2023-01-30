@@ -1,0 +1,1 @@
+export { StyledSearchBlock } from './styled_search_block.style'
