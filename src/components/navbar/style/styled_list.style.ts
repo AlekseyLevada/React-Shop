@@ -6,12 +6,12 @@ export const StyledList = styled.ul<iStyledList>`
     display: flex;
 li {
     transition: .3s;
-    /* border-bottom: 2px solid #fff; */
+    border-bottom: 2px solid #fff;
     margin: 0px 3px;
     margin-right: ${p => p.type === 'buttons' ? '25px' : '5px'};
         &:hover {
             transition: .3s;
-            /* border-bottom: 2px solid #FFCA05; */
+            border-bottom: 2px solid #FFCA05;
     }
         a {
             text-decoration: none;
@@ -22,11 +22,11 @@ li {
                 border-radius: 5px;
                 padding: 5px;
             `
-            : 
-            css`
-                color: #fff;
+        :
+        css`
+                color: #FFCA05;
             `
-        }
+    }
     }
 }
 `

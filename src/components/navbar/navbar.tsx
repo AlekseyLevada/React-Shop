@@ -28,7 +28,7 @@ export function Navbar({ menu: { buttons, links } }: iNavbar): JSX.Element {
                 }
             </StyledList>
             <h1>
-                iNordic-Shool<span>.</span>
+                INordic - Shool <span>.</span>
             </h1>
             <StyledList type='buttons'>
                 {
