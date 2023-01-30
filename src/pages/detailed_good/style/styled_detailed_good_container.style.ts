@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const StyledDetailedGoodContainer = styled.div`
-    img {
-        width: 200px;
-    }
+    min-height: 100vh;
+    padding: 10px;
 `
