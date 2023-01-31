@@ -1,4 +1,4 @@
-import { iGoods } from "../../../components/good_list/types";
+import { iGoods } from "../../../global_types";
 
 export function createInitialState() {
     return {

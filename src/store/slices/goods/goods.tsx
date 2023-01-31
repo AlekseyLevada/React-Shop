@@ -15,5 +15,8 @@ export const slice = createSlice({
             .addCase('GET_ALL_GOODS', (state, action: iPayload) => {
                 state.list = (action.payload)
             })
+            .addCase('DELETE_GOOD', (state, action: iPayload) => {
+                
+            })
     }
 })

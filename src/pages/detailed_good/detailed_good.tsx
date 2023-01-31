@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from "react-router-dom"
-import { iGood } from '../../components/good_list/types'
+import { iGood } from '../../global_types'
 import goodsJSON from '../../stub/goods.json'
 import { StyledDetailedGoodContainer, StyledDetailedGoodCard, StyledDetailedGoodButtonsContainer } from './style'
 import { useAppDispatch } from '../../store'
 import { createExtraActions } from '../../store/actions/goods'
 
 export function DetailedGood(): JSX.Element {
+    const { id } = useParams()
+    const dispatch = useAppDispatch()
+    const { addToBasket } = createExtraActions()
 
     const [good, setGood] = useState({
         TITLE: '',
@@ -15,12 +18,6 @@ export function DetailedGood(): JSX.Element {
         PRICE: '',
         IMG: '',
     })
-
-    const { id } = useParams()
-
-    const dispatch = useAppDispatch()
-
-    const { addToBasket } = createExtraActions()
 
     useEffect(() => {
         const good = goodsJSON.find((good: iGood) => good.ID === id) as iGood
