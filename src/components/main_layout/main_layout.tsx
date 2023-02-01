@@ -2,6 +2,7 @@ import { StyledMainLayout } from './style'
 import { useState } from 'react'
 import { Navbar } from '../navbar'
 import { Outlet } from 'react-router-dom'
+import { Clock } from '../clock'
 
 export function MainLayout(): JSX.Element {
     const [menu, setMenu] = useState(

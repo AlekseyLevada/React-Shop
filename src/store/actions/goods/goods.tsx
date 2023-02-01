@@ -11,14 +11,14 @@ export function createExtraActions() {
     function addToBasket(good: any) {
         return {
             type: 'ADD_TO_BASKET',
-            payload: good ,
+            payload: good,
         }
     }
 
     function getAllGoods() {
-        return{
+        return {
             type: 'GET_ALL_GOODS',
-            payload: [...goodsJSON] ,
+            payload: [...goodsJSON],
         }
     }
 
@@ -26,6 +26,6 @@ export function createExtraActions() {
         return {
             type: 'DELETE_GOOD',
             payload: good,
-        } 
+        }
     }
 }

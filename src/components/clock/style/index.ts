@@ -1,0 +1,1 @@
+export { StyledClockContainer }  from './styled_clock_container.style'
