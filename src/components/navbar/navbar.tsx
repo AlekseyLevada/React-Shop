@@ -3,13 +3,8 @@ import { useSelector } from 'react-redux'
 
 import { StyledNavbar, StyledList } from './style'
 import { iNavbar, buttonsAndLinks } from './types'
-import { iGoods } from '../../global_types'
+import { iReduxGoodsState } from '../../global_types'
 
-export interface iReduxGoodsState {
-    goods: {
-        basket: iGoods
-    }
-}
 
 export function Navbar({ menu: { buttons, links } }: iNavbar): JSX.Element {
 
