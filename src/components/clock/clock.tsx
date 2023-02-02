@@ -13,7 +13,7 @@ export function Clock(): JSX.Element {
     return(
         <StyledClockContainer>
             <h4>
-                {time}
+                Текущее время: {time}
             </h4>
         </StyledClockContainer>
     )

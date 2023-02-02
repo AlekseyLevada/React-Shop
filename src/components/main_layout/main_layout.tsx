@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 import { Clock } from '../clock'
 
 export function MainLayout(): JSX.Element {
-    const [menu, setMenu] = useState(
+    const [menu] = useState(
         {
             links: [
                 {
@@ -43,6 +43,7 @@ export function MainLayout(): JSX.Element {
 
     return (
         <StyledMainLayout>
+            <Clock />
             <Navbar menu={menu} />
             <Outlet />
         </StyledMainLayout>

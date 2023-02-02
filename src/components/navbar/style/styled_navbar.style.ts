@@ -15,7 +15,7 @@ position: relative;
     h1{
         font-family:'Pacifico', cursive;
         font-size: 30px;
-        margin-left: 50px;
+        margin-left: 100px;
         text-shadow: 0px 0px 5px #FFCA05;
         span {
             color: #F5252C;
