@@ -1,0 +1,1 @@
+export { StyledPageContainer } from './styled_page_container.style'

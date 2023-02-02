@@ -6,6 +6,7 @@ import { StyledBasketContainer } from "./style"
 export function Basket(): JSX.Element {
 
     const basket: any = useSelector<iReduxGoodsState>(state => state.goods.basket)
+    //console.log(basket)
 
     return (
         <StyledBasketContainer>

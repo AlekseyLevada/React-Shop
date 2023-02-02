@@ -13,10 +13,10 @@ export const slice = createSlice({
                 state.basket.push(action.payload)
             })
             .addCase('GET_ALL_GOODS', (state, action: iPayload) => {
-                state.list = (action.payload)
+                state.list = action.payload
             })
             .addCase('DELETE_GOOD', (state, action: iPayload) => {
-                
+                state.basket = state.basket.filter((el: any)=> el.ID !== action.payload.ID)
             })
     }
-})
+})  

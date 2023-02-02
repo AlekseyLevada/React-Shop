@@ -15,10 +15,10 @@ export function createExtraActions() {
         }
     }
 
-    function getAllGoods() {
+    function getAllGoods(){
         return {
             type: 'GET_ALL_GOODS',
-            payload: [...goodsJSON],
+            payload: goodsJSON,
         }
     }
 
