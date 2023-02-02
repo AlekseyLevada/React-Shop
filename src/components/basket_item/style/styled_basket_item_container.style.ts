@@ -1,15 +1,23 @@
 import styled from 'styled-components'
 
 export const StyledBasketItemContainer = styled.div`
+    padding: 10px;
     margin: 20px auto;
     width: 90%;
-    padding: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: 2px solid #2A284E;
+    outline: 1px solid #2A284E;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px #CCC6C5;
     img {
+        border-radius: 3px;
+        outline: 1px solid #2A284E;
         width: 200px;
+        box-shadow: 0px 0px 10px #CCC6C5;
+    }
+    p {
+        max-width: 300px;
+        margin: 5px;
     }
 `

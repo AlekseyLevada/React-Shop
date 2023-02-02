@@ -5,19 +5,30 @@ export const StyledDecCounterButton = styled.button`
     width: 30px;
     height: 30px;
     margin:10px;
-    border: 2px solid #2A284E;
+    outline: 2px solid #2A284E;
     border-radius: 50%;
-    background-color: transparent;
+    background-color: #CCC6C5;
+        &:hover {
+            background-color: #2A284E;
+        }
         &::before {
             display: block;
             position: absolute;
-            top: 45%;
-            left: 24%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
             content: '';
             width: 13px;
             height: 3px;
             border-radius: 5px;
             background-color: #2A284E;
-            color: #FDBF74;
+        }
+        &:hover::before {
+            background-color: #FDBF74;
         }
 `

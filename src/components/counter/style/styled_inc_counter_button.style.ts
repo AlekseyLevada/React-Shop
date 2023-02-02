@@ -5,9 +5,12 @@ export const StyledIncCounterButton = styled.button`
     width: 30px;
     height: 30px;
     margin:10px;
-    border: 2px solid #2A284E;
+    outline: 2px solid #2A284E;
     border-radius: 50%;
-    background-color: transparent;
+    background-color: #CCC6C5;
+        &:hover {
+            background-color: #2A284E;
+        }
         &::before {
             display: block;
             position: absolute;
@@ -42,5 +45,8 @@ export const StyledIncCounterButton = styled.button`
             height: 3px;
             border-radius: 5px;
             background-color: #2A284E;
+        }
+        &:hover::before, :hover::after {
+            background-color: #FDBF74;
         }
 `

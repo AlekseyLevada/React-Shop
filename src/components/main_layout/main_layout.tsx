@@ -9,7 +9,7 @@ export function MainLayout(): JSX.Element {
         {
             links: [
                 {
-                    text: 'Главная',
+                    text: 'Товары',
                     link: '/',
                 },
                 {

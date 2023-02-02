@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { BasketItem } from "../components/basket_item"
+import { BasketItem } from "../../components/basket_item"
 import { iGood, iReduxGoodsState } from '../../global_types'
 import { StyledBasketContainer } from "./style"
 

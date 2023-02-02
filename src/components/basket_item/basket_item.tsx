@@ -1,7 +1,7 @@
 import { StyledBasketItemContainer, StyledBasketCloseItem } from './style'
-import { useAppDispatch } from '../../../store'
-import { createExtraActions } from '../../../store/actions/goods'
-import { Counter } from '../../../components/counter'
+import { useAppDispatch } from '../../store'
+import { createExtraActions } from '../../../src/store/actions/goods'
+import { Counter } from '../counter'
 
 export function BasketItem({ data }: any): JSX.Element {
 
@@ -10,14 +10,14 @@ export function BasketItem({ data }: any): JSX.Element {
     
     return (
         <StyledBasketItemContainer>
-            <h4>
+            <p>
                 {data.TITLE}
-            </h4>
+            </p>
             <img src={data.IMG} alt="basket_item_image" />
             <Counter />
-            <h4>
+            <p>
                 {data.DISCR}
-            </h4>
+            </p>
             <StyledBasketCloseItem onClick={()=>dispatch(deleteGood(data))}>
             </StyledBasketCloseItem>
         </StyledBasketItemContainer>
