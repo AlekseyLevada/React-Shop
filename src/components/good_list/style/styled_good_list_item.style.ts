@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const StyledGoodListItem = styled.div`
+    cursor: pointer;
     width: 20%;
     border-radius: 5px;
     padding: 10px;
