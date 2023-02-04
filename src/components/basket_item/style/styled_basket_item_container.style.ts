@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledBasketItemContainer = styled.div`
-    padding: 10px;
+    padding: 10px 0px 10px 10px ;
     margin: 20px auto;
     width: 90%;
     display: flex;
@@ -16,8 +16,11 @@ export const StyledBasketItemContainer = styled.div`
         width: 200px;
         box-shadow: 0px 0px 10px #CCC6C5;
     }
+    p:first-child {
+        width: 100px;
+    }
     p {
-        max-width: 300px;
+        width: 400px;
         margin: 5px;
     }
 `

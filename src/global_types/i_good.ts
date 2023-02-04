@@ -1,8 +1,9 @@
 export type iGood = {
-    ID: string
+    ID?: string
     TITLE: string
     DISCR: string
     PRICE: string
     IMG: string
     COUNT: string
+    QUANTITY?: any
 }

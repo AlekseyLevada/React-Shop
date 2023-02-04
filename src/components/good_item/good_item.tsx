@@ -2,31 +2,32 @@ import { Link } from 'react-router-dom'
 import { StyledGoodItem, StyledButtonContainer, StyledImg, StyledTitle } from './style'
 import { createExtraActions } from '../../store/actions/goods'
 import { useAppDispatch } from '../../store'
+import { iGood } from '../../global_types'
 
-export function GoodItem({ data }: any): JSX.Element {
+export function GoodItem(good: iGood): JSX.Element {
 
     const dispatch = useAppDispatch()
-    const { addToBasket } = createExtraActions()
+    const { addGoodToBasket } = createExtraActions()
     
     return (
         <StyledGoodItem>
             <StyledTitle>
-                {data.TITLE}
+                {good.TITLE}
             </StyledTitle>
-            <StyledImg src={data.IMG} alt="product_image" />
+            <StyledImg src={good.IMG} alt="product_image" />
             <p>
-                {data.DISCR}
+                {good.DISCR}
             </p>
             <p>
-                Колличество на складе {data.COUNT}
+                Колличество на складе {good.COUNT}
             </p>
             <StyledButtonContainer>
-                <Link to={`/goods/${data.ID}`}>
+                <Link to={`/goods/${good.ID}`}>
                     <button>
                         Подробнее
                     </button>
                 </Link>
-                <button onClick={ () => dispatch(addToBasket(data))}>
+                <button onClick={ () => dispatch(addGoodToBasket(good))}>
                     В корзину
                 </button>
             </StyledButtonContainer>

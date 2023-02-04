@@ -1,18 +1,19 @@
 import styled from 'styled-components'
 
 export const StyledBasketCloseItem = styled.button`
-align-self: flex-start;
-    margin: 10px;
+    align-self: flex-start;
     padding: 5px;
     position: relative;
     width: 30px;
     height: 30px;
+    outline: 2px solid #2A284E;
     border-radius: 50%;
     background-color: #CCC6C5;
     transition: .3s;
         &:hover {
             transition: .3s;
             background-color: tomato;
+            outline: 2px solid #CCC6C5;
         }
         &::before {
         position: absolute;

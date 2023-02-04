@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from "react-router-dom"
-import { iGood } from '../../global_types'
 import goodsJSON from '../../stub/goods.json'
 import { StyledDetailedGoodContainer, StyledDetailedGoodCard, StyledDetailedGoodButtonsContainer } from './style'
 import { useAppDispatch } from '../../store'
 import { createExtraActions } from '../../store/actions/goods'
+import { iGood } from '../../global_types'
 
 export function DetailedGood(): JSX.Element {
     const { id } = useParams()
     const dispatch = useAppDispatch()
-    const { addToBasket } = createExtraActions()
+    const { addGoodToBasket } = createExtraActions()
 
     const [good, setGood] = useState({
         TITLE: '',
@@ -20,7 +20,7 @@ export function DetailedGood(): JSX.Element {
     })
 
     useEffect(() => {
-        const good = goodsJSON.find((good: iGood) => good.ID === id) as iGood
+        const good: iGood = goodsJSON.find((good: iGood) => good.ID === id) as iGood
         setGood(good)
     }, [])
 
@@ -40,13 +40,16 @@ export function DetailedGood(): JSX.Element {
                     <h3>
                         Цена: {good.PRICE}
                     </h3>
+                    <h3>
+                        Количество на складе: {good.COUNT}
+                    </h3>
                     <StyledDetailedGoodButtonsContainer>
                         <Link to={`/`}>
                             <button>
                                 Назад к списку
                             </button>
                         </Link>
-                        <button onClick={() => dispatch(addToBasket(good))}>
+                        <button onClick={() => dispatch(addGoodToBasket(good))}>
                             Добавить в корзину
                         </button>
                     </StyledDetailedGoodButtonsContainer>

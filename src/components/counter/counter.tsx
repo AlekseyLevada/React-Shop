@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { StyledCounterContainer, StyledIncCounterButton, StyledDecCounterButton } from './style'
 
 export function Counter(): JSX.Element {
-    const [counter, setCounter] = useState(0)
+    const [counter, setCounter] = useState(1)
 
     function increment() {
         setCounter(counter + 1)
@@ -14,7 +14,7 @@ export function Counter(): JSX.Element {
 
     return (
         <StyledCounterContainer>
-            <StyledDecCounterButton disabled={counter === 0?  true: false} onClick={() => decrement()}></StyledDecCounterButton>
+            <StyledDecCounterButton disabled={counter === 1?  true: false} onClick={() => decrement()}></StyledDecCounterButton>
             {counter}
             <StyledIncCounterButton onClick={() => increment()}></StyledIncCounterButton>
         </StyledCounterContainer>

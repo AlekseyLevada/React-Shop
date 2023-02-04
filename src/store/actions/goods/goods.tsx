@@ -1,31 +1,44 @@
+import { iGood } from '../../../global_types'
 import goodsJSON from '../../../stub/goods.json'
 
 export function createExtraActions() {
 
     return {
-        addToBasket: addToBasket,
         getAllGoods: getAllGoods,
-        deleteGood: deleteGood,
+        addGoodToBasket: addGoodToBasket,
+        deleteGoodFromBasket: deleteGoodFromBasket,
+        changeGoodCount:changeGoodCount,
     }
 
-    function addToBasket(good: any) {
-        return {
-            type: 'ADD_TO_BASKET',
-            payload: good,
-        }
-    }
-
-    function getAllGoods(){
+    function getAllGoods() {
         return {
             type: 'GET_ALL_GOODS',
-            payload: goodsJSON,
+            payload: [...goodsJSON],
         }
     }
 
-    function deleteGood(good: any) {
+    function addGoodToBasket(good: iGood) {
         return {
-            type: 'DELETE_GOOD',
+            type: 'ADD_GOOD_TO_BASKET',
+            payload: { ...good },
+        }
+    }
+
+    function deleteGoodFromBasket(good: iGood) {
+        return {
+            type: 'DELETE_GOOD_FROM_BASKET',
             payload: good,
         }
     }
+
+    function changeGoodCount(operation: string, good: iGood) {
+        return {
+            type: 'CHANGE_GOOD_COUNT',
+            payload: {
+                operation,
+                good,
+            }
+        }
+    }
+
 }

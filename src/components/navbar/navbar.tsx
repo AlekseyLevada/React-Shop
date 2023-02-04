@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux'
 
 import { StyledNavbar, StyledList } from './style'
 import { iNavbar, buttonsAndLinks } from './types'
-import { iReduxGoodsState } from '../../global_types'
+import { iReduxGoodsState, iGoods } from '../../global_types'
 
 
 export function Navbar({ menu: { buttons, links } }: iNavbar): JSX.Element {
 
-    const basket: any= useSelector<iReduxGoodsState>(state => state.goods.basket)
+    const basket = useSelector<iReduxGoodsState, iGoods>(state => state.goods.basket)
 
     return (
         <StyledNavbar>
@@ -23,7 +23,9 @@ export function Navbar({ menu: { buttons, links } }: iNavbar): JSX.Element {
                 }
             </StyledList>
             <h1>
-                INordic - Shop <span>.</span>
+                <Link to='/'>
+                    INordic - Shop <span>.</span>
+                </Link>
             </h1>
             <StyledList type='buttons'>
                 {
