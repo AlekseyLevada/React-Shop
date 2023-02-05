@@ -1,0 +1,1 @@
+export { StyledForm } from './styled_form.style'

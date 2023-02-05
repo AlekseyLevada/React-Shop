@@ -25,7 +25,7 @@ export const slice = createSlice({
                 action.payload.QUANTITY = 1
 
                 if (!switcher) {
-                    state.basket.push(action.payload) 
+                    state.basket.push(action.payload)
                 }
             })
             .addCase('DELETE_GOOD_FROM_BASKET', (state, action: iPayload) => {
