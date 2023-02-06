@@ -11,9 +11,9 @@ export function Basket(): JSX.Element {
 
     return (
         <StyledBasketContainer>
-            <h2>
+            <h3>
                 Корзина заказов
-            </h2>
+            </h3>
             {
                 basket.map((good: iGood, index: number) => <BasketItem { ...good } key={ index } />) as JSX.Element[] | ReactNode
             }
