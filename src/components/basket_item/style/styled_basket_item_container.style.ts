@@ -19,7 +19,7 @@ export const StyledBasketItemContainer = styled.div`
     p:first-child {
         width: 100px;
     }
-    p {
+    p:last-child {
         width: 400px;
         margin: 5px;
     }
