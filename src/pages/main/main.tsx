@@ -6,7 +6,6 @@ export function Main() : JSX.Element {
     return (
         <>
             <HelloBlock/>
-            <SearchBlock/>
             <Outlet />
         </>
     )

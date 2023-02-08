@@ -10,8 +10,21 @@ export const slice = createSlice({
     reducers: createExtraReducers(),
     extraReducers: (builder) => {
         builder
+
             .addCase('GET_ALL_GOODS', (state, action: iPayload) => {
                 state.list = action.payload
+            })
+
+            .addCase('FIND_GOODS', (state, action: iPayload) => {
+               state.list.find(el => {
+                    if(el.TITLE.toLowerCase() === action.payload.inputValue.toLowerCase()) {
+                        state.list = [el]
+                    }
+                    else if(action.payload.inputValue == '' || action.payload.inputValue == null){
+                        state.list = action.payload.goodsJSON
+                    }
+                })
+                //state.list = action.payload.goodsJSON
             })
 
             .addCase('ADD_GOOD_TO_BASKET', (state, action: iPayload) => {
@@ -28,7 +41,6 @@ export const slice = createSlice({
                 if (!switcher) {
                     state.basket.push(action.payload)
                 }
-                //console.log(action.payload)
             })
 
             .addCase('DELETE_GOOD_FROM_BASKET', (state, action: iPayload) => {
@@ -51,7 +63,6 @@ export const slice = createSlice({
                     return good
                 })
                 state.basket = filteredGoodsInBasket
-                //console.log(good)
             })
     }
 })  

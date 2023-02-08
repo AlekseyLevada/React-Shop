@@ -1,5 +1,6 @@
 import { iGood } from '../../../global_types'
 import goodsJSON from '../../../stub/goods.json'
+import { ChangeEvent } from 'react'
 
 export function createExtraActions() {
 
@@ -8,6 +9,18 @@ export function createExtraActions() {
         addGoodToBasket: addGoodToBasket,
         deleteGoodFromBasket: deleteGoodFromBasket,
         changeGoodCount:changeGoodCount,
+        findGoods:findGoods,
+    }
+
+    function findGoods(e: ChangeEvent<HTMLInputElement>, good: any) {
+        return {
+            type:'FIND_GOODS',
+            payload: {
+                inputValue: e.target.value,
+                good,
+                goodsJSON,
+            },
+        }
     }
 
     function getAllGoods() {
