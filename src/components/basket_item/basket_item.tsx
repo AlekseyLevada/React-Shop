@@ -1,4 +1,4 @@
-import { StyledBasketItemContainer, StyledBasketCloseItem, StyledBasketItemCard, StyledBasketItemTotalPrice } from './style'
+import { StyledBasketItemContainer, StyledBasketCloseItem, StyledBasketItemCard, StyledBasketItemTotalPrice, StyledCounterContainer, StyledIncCounterButton, StyledDecCounterButton } from './style'
 import { useAppDispatch } from '../../store'
 import { createExtraActions } from '../../../src/store/actions/goods'
 import { iGood } from '../../global_types'
@@ -12,20 +12,18 @@ export function BasketItem(data: iGood): JSX.Element {
         <StyledBasketItemContainer>
             <StyledBasketItemCard>
                 <img src={data.IMG} alt="basket_item_image" />
-
                 <p>
                     {data.TITLE}
                 </p>
-
-                <button disabled={data.QUANTITY === 1 ? true : false} onClick={() => dispatch(changeGoodCount('-', data))}>
-                    -
-                </button>
-                <span>
-                    {data.QUANTITY}
-                </span>
-                <button onClick={() => dispatch(changeGoodCount('+', data))}>
-                    +
-                </button>
+                <StyledCounterContainer>
+                    <StyledDecCounterButton disabled={data.QUANTITY === 1 ? true : false} onClick={() => dispatch(changeGoodCount('-', data))}>
+                    </StyledDecCounterButton>
+                    <span>
+                        {data.QUANTITY}
+                    </span>
+                    <StyledIncCounterButton onClick={() => dispatch(changeGoodCount('+', data))}>
+                    </StyledIncCounterButton>
+                </StyledCounterContainer>
                 <p>
                     {data.DISCR}
                 </p>
