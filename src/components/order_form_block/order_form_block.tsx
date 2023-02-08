@@ -25,11 +25,10 @@ export function OrderFormBlock(): JSX.Element {
         const phone = DataFromForm.get('phone')
         const email = DataFromForm.get('email')
         
-        // let messageText = `Уважаемый ${name} вы оформили заказ в iNordic - Shop`
         let messageToAdmin = `Пользователь ${name}, оформил заказ в интернет магазине iNordic - Shop. \n` 
 
         basket.map((good: iGood) => {
-            messageToAdmin += `Товар: ${good.TITLE} в количестве ${good.QUANTITY} экземпляров. \n`
+            messageToAdmin += `Товар: ${good.TITLE} в количестве ${good.QUANTITY} экземпляров общей стоимостью ${good.TOTAL_PRICE} руб. \n`
             messageToAdmin += `Свяжитесь с покупателем по телефону ${phone}, или по электронной почте ${email} \n`
         })
 

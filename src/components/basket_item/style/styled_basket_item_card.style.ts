@@ -22,8 +22,8 @@ export const StyledBasketItemCard = styled.div`
     p:first-child {
         width: 100px;
     }
-    p:last-child {
-        width: 400px;
+    p {
+        width: 300px;
         margin: 5px;
     }
 `

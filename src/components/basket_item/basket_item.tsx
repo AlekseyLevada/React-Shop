@@ -33,7 +33,7 @@ export function BasketItem(data: iGood): JSX.Element {
 
             </StyledBasketItemCard>
             <StyledBasketItemTotalPrice>
-                Итого: {data.QUANTITY * Number(data.PRICE) as number} руб.
+                Итого: {data.TOTAL_PRICE} руб.
             </StyledBasketItemTotalPrice>
         </StyledBasketItemContainer>
     )

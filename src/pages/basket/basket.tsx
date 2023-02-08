@@ -8,7 +8,7 @@ import { OrderFormBlock } from "../../components/order_form_block"
 export function Basket(): JSX.Element {
 
     const basket = useSelectorTyped<iReduxGoodsState, iGoods>(state => state.goods.basket)
-
+    console.log(basket)
     return (
         <StyledBasketContainer>
             <h3>

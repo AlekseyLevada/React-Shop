@@ -5,5 +5,6 @@ export type iGood = {
     PRICE: string
     IMG: string
     COUNT: string
-    QUANTITY?: any
+    QUANTITY?: number
+    TOTAL_PRICE?: number
 }
