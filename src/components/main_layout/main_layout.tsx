@@ -30,7 +30,7 @@ export function MainLayout(): JSX.Element {
                 {
                     icon: 'https://img.icons8.com/fluency/512/shopping-cart-loaded.png',
                     text: 'Авторизация',
-                    link: '/auth',
+                    link: '/authentication',
                 },
                 {
                     icon: 'https://img.icons8.com/fluency/512/shopping-cart-loaded.png',

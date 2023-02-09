@@ -24,7 +24,6 @@ export const slice = createSlice({
                         state.list = action.payload.goodsJSON
                     }
                 })
-                //state.list = action.payload.goodsJSON
             })
 
             .addCase('ADD_GOOD_TO_BASKET', (state, action: iPayload) => {

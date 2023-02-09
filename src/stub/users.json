@@ -4,10 +4,10 @@
         "NAME": "INordic",
         "SURNAME": "IT",
         "IMG": "no_image",
-        "EMAIL": "INordic@gmail.ru",
+        "EMAIL": "admin@mail.ru",
         "PHONE": "+7123456780",
-        "LOGIN": "login",
-        "PASSWORD": "pass",
+        "LOGIN": "admin",
+        "PASSWORD": "admin",
         "ROLE": "admin"
     }
 ]
