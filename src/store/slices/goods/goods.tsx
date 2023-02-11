@@ -2,7 +2,18 @@ import { createSlice } from '@reduxjs/toolkit'
 import { iPayload } from '../types'
 import { createInitialState } from '../../state/goods'
 import { createExtraReducers } from '../../reducers/goods'
+import { createExtraActions } from '../../actions/goods'
 import { iGood } from '../../../global_types'
+
+
+// export const extraActions: {
+//     getAllGoods: any,
+//     addGoodToBasket: any,
+//     deleteGoodFromBasket: any,
+//     changeGoodCount: any
+// } = createExtraActions()
+
+const { getAllGoods } = createExtraActions()
 
 export const slice = createSlice({
     name: 'goods',
@@ -11,20 +22,37 @@ export const slice = createSlice({
     extraReducers: (builder) => {
         builder
 
-            .addCase('GET_ALL_GOODS', (state, action: iPayload) => {
+            // .addCase('REGISTER_NEW_USER', (state, action: iPayload) => {
+            //     console.log(action.payload)
+            // })
+
+            // .addCase('GET_ALL_GOODS', (state, action: iPayload) => {
+            //     state.list = action.payload
+            // })
+
+            .addCase(getAllGoods.pending, (state, action: iPayload) => {
+                console.log('action', action)
+            })
+            .addCase(getAllGoods.fulfilled, (state, action: iPayload) => {
+                console.log('action', action)
                 state.list = action.payload
             })
-
-            .addCase('FIND_GOODS', (state, action: iPayload) => {
-               state.list.find(el => {
-                    if(el.TITLE.toLowerCase() === action.payload.inputValue.toLowerCase()) {
-                        state.list = [el]
-                    }
-                    else if(action.payload.inputValue == '' || action.payload.inputValue == null){
-                        state.list = action.payload.goodsJSON
-                    }
-                })
+            .addCase(getAllGoods.rejected, (state, action: iPayload) => {
+                console.log('action', action)
             })
+
+
+
+            // .addCase('FIND_GOODS', (state, action: iPayload) => {
+            //     state.list.find(el => {
+            //         if (el.TITLE.toLowerCase() === action.payload.inputValue.toLowerCase()) {
+            //             state.list = [el]
+            //         }
+            //         else if (action.payload.inputValue == '' || action.payload.inputValue == null) {
+            //             state.list = action.payload.goodsJSON
+            //         }
+            //     })
+            // })
 
             .addCase('ADD_GOOD_TO_BASKET', (state, action: iPayload) => {
                 action.payload.QUANTITY = 1
@@ -65,3 +93,5 @@ export const slice = createSlice({
             })
     }
 })  
+
+//export const goodsActions = {...slice.actions, ...extraActions}

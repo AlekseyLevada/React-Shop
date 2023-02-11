@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-padding: 10px;
+padding: 20px;
 outline: 1px solid #c8c8c8;
 box-shadow: 0px 0px 10px #c8c8c8;
 border-radius: 10px;

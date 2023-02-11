@@ -1,33 +1,53 @@
 import { iGood, iGoods } from '../../../global_types'
 import goodsJSON from '../../../stub/goods.json'
-import { ChangeEvent } from 'react'
+import { createAsyncThunk } from '@reduxjs/toolkit'
 
 export function createExtraActions() {
 
     return {
-        getAllGoods: getAllGoods,
+        getAllGoods: getAllGoods(),
         addGoodToBasket: addGoodToBasket,
         deleteGoodFromBasket: deleteGoodFromBasket,
-        changeGoodCount:changeGoodCount,
-        findGoods:findGoods,
+        changeGoodCount: changeGoodCount,
+        //findGoods: findGoods,
+        regNewUser: regNewUser,
     }
 
-    function findGoods(e: ChangeEvent<HTMLInputElement>, goods: iGoods) {
+    function regNewUser(data: any) {
         return {
-            type:'FIND_GOODS',
-            payload: {
-                inputValue: e.target.value,
-                goods,
-                goodsJSON,
-            },
+            type: 'REGISTER_NEW_USER',
+            payload: data,
         }
     }
+
+    // function findGoods(e: any, goods: iGoods) {
+    //     return {
+    //         type: 'FIND_GOODS',
+    //         payload: {
+    //             inputValue: e.target.value,
+    //             goods,
+    //             goodsJSON,
+    //         },
+    //     }
+    // }
+
+    // Action заглушки для товаров приложения
+    // function getAllGoods() {
+    //     return {
+    //         type: 'GET_ALL_GOODS',
+    //         payload: [...goodsJSON],
+    //     }
+    // }
 
     function getAllGoods() {
-        return {
-            type: 'GET_ALL_GOODS',
-            payload: [...goodsJSON],
-        }
+        return createAsyncThunk<any>(
+            'getAllGoods',
+                async () => {
+                    const response = await fetch('http://localhost:3001/goods/get')
+                    .then(res => res.json())
+                    return response
+                }
+            )
     }
 
     function addGoodToBasket(good: iGood) {
