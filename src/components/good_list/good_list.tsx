@@ -4,14 +4,11 @@ import { useSelector } from 'react-redux'
 import { StyledGoodListItem, StyledGoodListContainer, StyledGoodListCardsContainer, StyledSearchBlock } from './style'
 import { iGood, iGoods, iReduxGoodsState } from '../../global_types'
 import { GoodItem } from '../good_item'
-//import { goodsActions } from '../../store/slices/goods/goods'
 import { useAppDispatch } from '../../store/'
 import { createExtraActions } from '../../store/actions/goods'
 
 export function GoodList(): JSX.Element {
-
-    const { getAllGoods } = createExtraActions() // findGoods временно убрал
-    //const { findGoods } = createExtraActions()
+    const { getAllGoods, findGoods } = createExtraActions()
 
     const dispatch = useAppDispatch()
 
@@ -23,9 +20,9 @@ export function GoodList(): JSX.Element {
 
     return (
         <StyledGoodListContainer>
-            {/* <StyledSearchBlock encType="multipart/form-data" method='post'>
+            <StyledSearchBlock encType="multipart/form-data" method='post'>
                 <input type='text' placeholder='Что вы ищите...?' name='search' onChange={(e) => dispatch(findGoods(e, goods))}/>
-            </StyledSearchBlock> */}
+            </StyledSearchBlock>
             <StyledGoodListCardsContainer>
                 {
                     goods.map((good: iGood, index: number) => <StyledGoodListItem key={index}>

@@ -9,7 +9,7 @@ export function createExtraActions() {
         addGoodToBasket: addGoodToBasket,
         deleteGoodFromBasket: deleteGoodFromBasket,
         changeGoodCount: changeGoodCount,
-        //findGoods: findGoods,
+        findGoods: findGoods,
         regNewUser: regNewUser,
     }
 
@@ -20,16 +20,16 @@ export function createExtraActions() {
         }
     }
 
-    // function findGoods(e: any, goods: iGoods) {
-    //     return {
-    //         type: 'FIND_GOODS',
-    //         payload: {
-    //             inputValue: e.target.value,
-    //             goods,
-    //             goodsJSON,
-    //         },
-    //     }
-    // }
+    function findGoods(e: any, goods: iGoods) {
+        return {
+            type: 'FIND_GOODS',
+            payload: {
+                inputValue: e.target.value,
+                goods,
+                goodsJSON,
+            },
+        }
+    }
 
     // Action заглушки для товаров приложения
     // function getAllGoods() {
@@ -38,6 +38,9 @@ export function createExtraActions() {
     //         payload: [...goodsJSON],
     //     }
     // }
+
+
+    // Запрос к API
 
     function getAllGoods() {
         return createAsyncThunk<any>(

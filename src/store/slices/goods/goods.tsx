@@ -5,14 +5,6 @@ import { createExtraReducers } from '../../reducers/goods'
 import { createExtraActions } from '../../actions/goods'
 import { iGood } from '../../../global_types'
 
-
-// export const extraActions: {
-//     getAllGoods: any,
-//     addGoodToBasket: any,
-//     deleteGoodFromBasket: any,
-//     changeGoodCount: any
-// } = createExtraActions()
-
 const { getAllGoods } = createExtraActions()
 
 export const slice = createSlice({
@@ -26,9 +18,9 @@ export const slice = createSlice({
             //     console.log(action.payload)
             // })
 
-            // .addCase('GET_ALL_GOODS', (state, action: iPayload) => {
-            //     state.list = action.payload
-            // })
+            .addCase('GET_ALL_GOODS', (state, action: iPayload) => {
+                state.list = action.payload
+            })
 
             .addCase(getAllGoods.pending, (state, action: iPayload) => {
                 console.log('action', action)
@@ -41,18 +33,18 @@ export const slice = createSlice({
                 console.log('action', action)
             })
 
+            
 
-
-            // .addCase('FIND_GOODS', (state, action: iPayload) => {
-            //     state.list.find(el => {
-            //         if (el.TITLE.toLowerCase() === action.payload.inputValue.toLowerCase()) {
-            //             state.list = [el]
-            //         }
-            //         else if (action.payload.inputValue == '' || action.payload.inputValue == null) {
-            //             state.list = action.payload.goodsJSON
-            //         }
-            //     })
-            // })
+            .addCase('FIND_GOODS', (state, action: iPayload) => {
+                state.list.find(el => {
+                    if (el.TITLE.toLowerCase() === action.payload.inputValue.toLowerCase()) {
+                        state.list = [el]
+                    }
+                    else if (action.payload.inputValue == '' || action.payload.inputValue == null) {
+                        state.list = action.payload.goodsJSON
+                    } // Доработать логику с получением товаров с API
+                })
+            })
 
             .addCase('ADD_GOOD_TO_BASKET', (state, action: iPayload) => {
                 action.payload.QUANTITY = 1
@@ -93,5 +85,3 @@ export const slice = createSlice({
             })
     }
 })  
-
-//export const goodsActions = {...slice.actions, ...extraActions}
