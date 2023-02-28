@@ -1,4 +1,7 @@
-import { createBrowserRouter } from "react-router-dom"
+// Импортируем createHashRouter для корректной работы приложения на GitHub Pages
+//Для работы на другом хостинге или домене оставить createBrowserRouter
+
+import { createBrowserRouter, createHashRouter } from "react-router-dom"
 
 import { MainLayout } from "../../components/main_layout"
 import { GoodList } from "../../components/good_list"
@@ -13,7 +16,7 @@ import { DetailedGood } from '../../pages/detailed_good'
 
 
 
-export const Router = createBrowserRouter([
+export const Router = createHashRouter([
     {
         element: <MainLayout />,
         children: [
