@@ -5,7 +5,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 export function createExtraActions() {
 
     return {
-        getAllGoods: getAllGoods(),
+        getAllGoods: getAllGoods, // Для корректной работы санок значением ложна быть функция getAllGoods()
         addGoodToBasket: addGoodToBasket,
         deleteGoodFromBasket: deleteGoodFromBasket,
         changeGoodCount: changeGoodCount,
@@ -31,27 +31,28 @@ export function createExtraActions() {
         }
     }
 
-    // Action заглушки для товаров приложения
-    // function getAllGoods() {
-    //     return {
-    //         type: 'GET_ALL_GOODS',
-    //         payload: [...goodsJSON],
-    //     }
-    // }
+    //Action заглушки для товаров приложения
+
+    function getAllGoods() {
+        return {
+            type: 'GET_ALL_GOODS',
+            payload: [...goodsJSON],
+        }
+    }
 
 
     // Запрос к API
 
-    function getAllGoods() {
-        return createAsyncThunk<any>(
-            'getAllGoods',
-                async () => {
-                    const response = await fetch('http://localhost:3001/goods/get')
-                    .then(res => res.json())
-                    return response
-                }
-            )
-    }
+    // function getAllGoods() {
+    //     return createAsyncThunk<any>(
+    //         'getAllGoods',
+    //             async () => {
+    //                 const response = await fetch('http://localhost:3001/goods/get')
+    //                 .then(res => res.json())
+    //                 return response
+    //             }
+    //         )
+    // }
 
     function addGoodToBasket(good: iGood) {
         return {

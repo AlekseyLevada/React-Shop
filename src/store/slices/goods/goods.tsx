@@ -22,16 +22,16 @@ export const slice = createSlice({
                 state.list = action.payload
             })
 
-            .addCase(getAllGoods.pending, (state, action: iPayload) => {
-                console.log('action', action)
-            })
-            .addCase(getAllGoods.fulfilled, (state, action: iPayload) => {
-                console.log('action', action)
-                state.list = action.payload
-            })
-            .addCase(getAllGoods.rejected, (state, action: iPayload) => {
-                console.log('action', action)
-            })
+            // .addCase(getAllGoods.pending, (state, action: iPayload) => {
+            //     console.log('action', action)
+            // })
+            // .addCase(getAllGoods.fulfilled, (state, action: iPayload) => {
+            //     console.log('action', action)
+            //     state.list = action.payload
+            // })
+            // .addCase(getAllGoods.rejected, (state, action: iPayload) => {
+            //     console.log('action', action)
+            // })
 
             
 
