@@ -1,13 +1,15 @@
-import { ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import { useSelectorTyped } from "../../global_types/use_selector_type"
 import { BasketItem } from "../../components/basket_item"
 import { iGood, iGoods, iReduxGoodsState } from '../../global_types'
 import { StyledBasketContainer } from "./style"
 import { OrderFormBlock } from "../../components/order_form_block"
+import {useAppSelector} from "../../main_store/hooks";
 
-export function Basket(): JSX.Element {
+export const Basket:FC = ():JSX.Element => {
 
-    const basket = useSelectorTyped<iReduxGoodsState, iGoods>(state => state.goods.basket)
+    //const basket = useSelectorTyped<iReduxGoodsState, iGoods>(state => state.goods.basket)
+    const basket = useAppSelector(state => state.basket.basket)
     
     return (
         <StyledBasketContainer>

@@ -2,7 +2,7 @@
   "name": "inordic-shop",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://alekseylevada.github.io/React-Shop",
+  "homepage": "https://alekseylevada.github.io/React-Shop",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "prettier": "^2.8.7"
   }
 }

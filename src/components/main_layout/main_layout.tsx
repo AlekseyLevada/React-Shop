@@ -44,7 +44,7 @@ export function MainLayout(): JSX.Element {
     return (
         <StyledMainLayout>
             <Clock />
-            <Navbar menu={menu} />
+            <Navbar/>
             <Outlet />
         </StyledMainLayout>
     )

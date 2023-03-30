@@ -1,9 +1,10 @@
 import { StyledRegForm } from './style'
 import { StyledRegistrationContainer } from './style'
-import { useAppDispatch } from '../../store'
-import { createExtraActions } from '../../store/actions/goods'
+// import { useAppDispatch } from '../../store'
+// import { createExtraActions } from '../../store/actions/goods'
+import {useAppDispatch} from "../../main_store/hooks";
 
-const { regNewUser } = createExtraActions()
+//const { regNewUser } = createExtraActions()
 
 const formData = (e: any) => {
     e.preventDefault()
@@ -31,7 +32,8 @@ export function RegistrationPage(): JSX.Element {
                 <input type='password' name='password' placeholder='Ваш пароль' />
                 <input type="email" name='email' placeholder='Ваша почта' />
                 <input type="tel" name='phone' placeholder='+7(000)-000-00-00' />
-                <button onClick={()=> dispatch(regNewUser)}>Зарегистрироваться</button>
+                {/*<button onClick={()=> dispatch(regNewUser)}>Зарегистрироваться</button>*/}
+                <button onClick={()=> console.log('click')}>Зарегистрироваться</button>
             </StyledRegForm>
         </StyledRegistrationContainer>
     )

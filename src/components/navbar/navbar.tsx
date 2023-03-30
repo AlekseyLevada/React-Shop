@@ -1,43 +1,32 @@
+import {FC} from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-
-import { StyledNavbar, StyledList } from './style'
-import { iNavbar, buttonsAndLinks } from './types'
+import { StyledNavbar, StyledNavbarLinks, StyledNavbarButtons } from './style'
 import { iReduxGoodsState, iGoods } from '../../global_types'
+import {useAppSelector} from "../../main_store/hooks";
 
+export const Navbar:FC = ():JSX.Element => {
 
-export function Navbar({ menu: { buttons, links } }: iNavbar): JSX.Element {
-
-    const basket = useSelector<iReduxGoodsState, iGoods>(state => state.goods.basket)
+    //const basket = useSelector<iReduxGoodsState, iGoods>(state => state.goods.basket)
+    const basket = useAppSelector(state => state.basket.basket)
 
     return (
         <StyledNavbar>
-            <StyledList>
-                {
-                    links.map((link: buttonsAndLinks, index: number) =>
-                        <li key={link.text + index}>
-                            <Link to={link.link}>
-                                {link.text}
-                            </Link>
-                        </li>)
-                }
-            </StyledList>
+            <StyledNavbarLinks>
+                <Link to={'/'}>Товары</Link>
+                <Link to={'/about'}>О нас</Link>
+                <Link to={'/contacts'}>Контакты</Link>
+            </StyledNavbarLinks>
             <h1>
                 <Link to='/'>
                     INordic - Shop <span>.</span>
                 </Link>
             </h1>
-            <StyledList type='buttons'>
-                {
-                    buttons.map((button: buttonsAndLinks, index: number) =>
-                        <li key={button.text + index}>
-                            <Link to={button.link}>
-                                {button.text}
-                                {button.text === 'Корзина' && `(${basket.length})`}
-                            </Link>
-                        </li>)
-                }
-            </StyledList>
+            <StyledNavbarButtons>
+                <Link to={'/registration'}><button>Регистрация</button></Link>
+                <Link to={'/authentication'}><button>Авторизация</button></Link>
+                <Link to={'/basket'}><button>Корзина ( {basket.length} )</button></Link>
+            </StyledNavbarButtons>
         </StyledNavbar>
     )
 }

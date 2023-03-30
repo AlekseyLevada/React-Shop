@@ -2,14 +2,16 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from "react-router-dom"
 import goodsJSON from '../../stub/goods.json'
 import { StyledDetailedGoodContainer, StyledDetailedGoodCard, StyledDetailedGoodButtonsContainer } from './style'
-import { useAppDispatch } from '../../store'
-import { createExtraActions } from '../../store/actions/goods'
+// import { useAppDispatch } from '../../store'
+// import { createExtraActions } from '../../store/actions/goods'
+import {useAppDispatch} from "../../main_store/hooks";
 import { iGood } from '../../global_types'
+import {addGoodToBasket} from "../../main_store/slices/basket/basketSlice";
 
 export function DetailedGood(): JSX.Element {
     const { id } = useParams()
     const dispatch = useAppDispatch()
-    const { addGoodToBasket } = createExtraActions()
+    //const { addGoodToBasket } = createExtraActions()
 
     const [good, setGood] = useState({
         TITLE: '',

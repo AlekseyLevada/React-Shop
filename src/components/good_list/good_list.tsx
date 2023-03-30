@@ -1,35 +1,40 @@
-import { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import {FC, useEffect} from "react";
+import goodsJSON from "../../stub/goods.json";
+import {
+  StyledGoodListItem,
+  StyledGoodListContainer,
+  StyledGoodListCardsContainer,
+  StyledSearchBlock,
+} from "./style";
+import { iGood, iGoods } from "../../global_types";
+import { GoodItem } from "../good_item";
+import {useAppDispatch, useAppSelector} from "../../main_store/hooks";
+import { getAsyncGoods } from "../../main_store/thunks/goodsThunk";
 
-import { StyledGoodListItem, StyledGoodListContainer, StyledGoodListCardsContainer, StyledSearchBlock } from './style'
-import { iGood, iGoods, iReduxGoodsState } from '../../global_types'
-import { GoodItem } from '../good_item'
-import { useAppDispatch } from '../../store/'
-import { createExtraActions } from '../../store/actions/goods'
+export const GoodList:FC = (): JSX.Element => {
+  const dispatch = useAppDispatch();
 
-export function GoodList(): JSX.Element {
-    const { getAllGoods, findGoods } = createExtraActions()
 
-    const dispatch = useAppDispatch()
+  useEffect(() => {
+    dispatch(getAsyncGoods());
+  }, []);
 
-    useEffect(() => {
-        dispatch(getAllGoods())
-    }, [])
+    const goods = goodsJSON;
+    //const goods = useAppSelector(state => state.goods.goodsList)
 
-    const goods = useSelector<iReduxGoodsState, iGoods>(state => state.goods.list)
 
-    return (
-        <StyledGoodListContainer>
-            <StyledSearchBlock encType="multipart/form-data" method='post'>
-                <input type='text' placeholder='Что вы ищите...?' name='search' onChange={(e) => dispatch(findGoods(e, goods))}/>
-            </StyledSearchBlock>
-            <StyledGoodListCardsContainer>
-                {
-                    goods.map((good: iGood, index: number) => <StyledGoodListItem key={index}>
-                        <GoodItem {...good} />
-                    </StyledGoodListItem>)
-                }
-            </StyledGoodListCardsContainer>
-        </StyledGoodListContainer>
-    )
-}
+  return (
+    <StyledGoodListContainer>
+      <StyledSearchBlock encType="multipart/form-data" method="post">
+        <input type="text" placeholder="Что вы ищите...?" name="search" />
+      </StyledSearchBlock>
+      <StyledGoodListCardsContainer>
+        {goods.map((good: iGood, index: number) => (
+          <StyledGoodListItem key={index}>
+            <GoodItem {...good} />
+          </StyledGoodListItem>
+        ))}
+      </StyledGoodListCardsContainer>
+    </StyledGoodListContainer>
+  );
+};
