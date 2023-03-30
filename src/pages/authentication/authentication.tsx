@@ -1,7 +1,7 @@
-import { StyledAuthForm } from './style'
-import { StyledAuthenticationContainer } from './style'
+import {FC} from "react";
+import { StyledAuthForm, StyledAuthenticationContainer } from './style'
 
-export function AuthenticationPage(): JSX.Element {
+export const AuthenticationPage:FC = ():JSX.Element => {
     return(
         <StyledAuthenticationContainer>
         <StyledAuthForm>

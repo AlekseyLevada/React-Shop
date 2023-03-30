@@ -16,10 +16,16 @@ export const GoodItem: FC<iGood> = (good: iGood): JSX.Element => {
 
   return (
     <StyledGoodItem>
-      <StyledTitle>{good.TITLE}</StyledTitle>
+      <StyledTitle>
+          {good.TITLE}
+      </StyledTitle>
       <StyledImg src={good.IMG} alt="product_image" />
-      <p>{good.DISCR}</p>
-      <p>Колличество на складе {good.COUNT}</p>
+      <p>
+          {good.DISCR}
+      </p>
+      <p>
+          Колличество на складе {good.COUNT}
+      </p>
       <StyledButtonContainer>
         <Link to={`/goods/${good.ID}`}>
           <button>Подробнее</button>

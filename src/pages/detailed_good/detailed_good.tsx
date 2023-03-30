@@ -1,25 +1,17 @@
-import { useState, useEffect } from 'react'
+import { FC, useState, useEffect } from 'react'
 import { useParams, Link } from "react-router-dom"
 import goodsJSON from '../../stub/goods.json'
 import { StyledDetailedGoodContainer, StyledDetailedGoodCard, StyledDetailedGoodButtonsContainer } from './style'
-// import { useAppDispatch } from '../../store'
-// import { createExtraActions } from '../../store/actions/goods'
-import {useAppDispatch} from "../../main_store/hooks";
+import {useAppDispatch, useAppSelector} from "../../main_store/hooks";
 import { iGood } from '../../global_types'
 import {addGoodToBasket} from "../../main_store/slices/basket/basketSlice";
 
-export function DetailedGood(): JSX.Element {
+
+export const DetailedGood:FC = (): JSX.Element => {
     const { id } = useParams()
     const dispatch = useAppDispatch()
-    //const { addGoodToBasket } = createExtraActions()
 
-    const [good, setGood] = useState({
-        TITLE: '',
-        DISCR: '',
-        COUNT: '',
-        PRICE: '',
-        IMG: '',
-    })
+    const [good, setGood] = useState<iGood>({TITLE: '', DISCR: '', COUNT: '', PRICE: '', IMG: ''})
 
     useEffect(() => {
         const good: iGood = goodsJSON.find((good: iGood) => good.ID === id) as iGood

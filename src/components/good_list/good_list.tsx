@@ -1,19 +1,18 @@
 import {FC, useEffect} from "react";
 import goodsJSON from "../../stub/goods.json";
+import { GoodItem } from "../good_item";
+import { iGood } from "../../global_types";
+import {useAppDispatch, useAppSelector} from "../../main_store/hooks";
+import { getAsyncGoods } from "../../main_store/thunks/goodsThunk";
 import {
   StyledGoodListItem,
   StyledGoodListContainer,
   StyledGoodListCardsContainer,
   StyledSearchBlock,
 } from "./style";
-import { iGood, iGoods } from "../../global_types";
-import { GoodItem } from "../good_item";
-import {useAppDispatch, useAppSelector} from "../../main_store/hooks";
-import { getAsyncGoods } from "../../main_store/thunks/goodsThunk";
 
 export const GoodList:FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
-
 
   useEffect(() => {
     dispatch(getAsyncGoods());
@@ -21,7 +20,6 @@ export const GoodList:FC = (): JSX.Element => {
 
     const goods = goodsJSON;
     //const goods = useAppSelector(state => state.goods.goodsList)
-
 
   return (
     <StyledGoodListContainer>

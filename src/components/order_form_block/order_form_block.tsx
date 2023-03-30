@@ -1,4 +1,4 @@
-import { useRef, RefObject } from 'react'
+import {useRef, RefObject, FormEvent} from 'react'
 import { iGoods, iGood, iReduxGoodsState } from '../../global_types'
 import { useSelectorTyped } from '../../global_types/use_selector_type'
 import { StyledForm } from './style'
@@ -37,7 +37,7 @@ export function OrderFormBlock(): JSX.Element {
 
     return(
         <>
-            <StyledForm ref={ RefForm } onSubmit={(e) => sendOrderMessage(e)}>
+            <StyledForm ref={ RefForm } onSubmit={(e:FormEvent<HTMLFormElement>) => sendOrderMessage(e)}>
                 <h3>
                     Форма для оформления заказа
                 </h3>

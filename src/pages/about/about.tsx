@@ -1,6 +1,7 @@
+import {FC} from "react";
 import { StyledAboutPageContainer } from "./style"
 
-export function AboutPage(): JSX.Element {
+export const AboutPage:FC = ():JSX.Element => {
     return (
         <StyledAboutPageContainer>
             <h3>

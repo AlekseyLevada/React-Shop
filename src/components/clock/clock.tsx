@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import {FC, useState, useEffect} from 'react'
 import { StyledClockContainer } from './style'
 
-export function Clock(): JSX.Element {
+export const Clock:FC = ():JSX.Element => {
     const [time, setTime] = useState(new Date().toLocaleTimeString())
 
     useEffect(()=> {

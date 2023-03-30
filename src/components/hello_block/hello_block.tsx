@@ -1,6 +1,7 @@
+import {FC} from "react";
 import { StyledHelloBlock } from "./style"
 
-export function HelloBlock() : JSX.Element {
+export const HelloBlock:FC = ():JSX.Element => {
     return(
         <StyledHelloBlock>
             <h2>

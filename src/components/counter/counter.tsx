@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import {FC, useState} from 'react'
 import { StyledCounterContainer, StyledIncCounterButton, StyledDecCounterButton } from './style'
 
-export function Counter(): JSX.Element {
+export const Counter:FC = ():JSX.Element => {
     const [counter, setCounter] = useState(1)
 
     function increment() {

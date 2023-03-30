@@ -1,4 +1,6 @@
-export function ContactsPage(): JSX.Element {
+import {FC} from "react";
+
+export const ContactsPage:FC = ():JSX.Element => {
     return(
         <>
             <h2>

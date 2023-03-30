@@ -1,6 +1,7 @@
+import {FC} from "react";
 import { StyledSearchBlock } from './style'
 
-export function SearchBlock() : JSX.Element {
+export const SearchBlock:FC = ():JSX.Element => {
 
     return(
         <StyledSearchBlock encType="multipart/form-data" method='post'>
