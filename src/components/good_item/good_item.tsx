@@ -22,17 +22,17 @@ export const GoodItem: FC<GoodItemPropsState> = (props:GoodItemPropsState): JSX.
   return (
     <StyledGoodItem>
       <StyledTitle>
-          {good.TITLE}
+          {good.title}
       </StyledTitle>
-      <StyledImg src={good.IMG} alt="product_image" />
+      <StyledImg src={good.image} alt="product_image" />
       <p>
-          {good.DISCR}
+          {good.description}
       </p>
       <p>
-          Колличество на складе {good.COUNT}
+          {/*Колличество на складе {good.COUNT}*/}
       </p>
       <StyledButtonContainer>
-        <Link to={`/goods/${good.ID}`}>
+        <Link to={`/goods/${good.id}`}>
           <button>Подробнее</button>
         </Link>
         <button onClick={() => {dispatch(addGoodToBasket(good)); disableButton()}} disabled={isDisabled? true : false}>

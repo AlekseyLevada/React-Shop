@@ -1,11 +1,10 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {iGood} from "../../../global_types";
+import {ICoffee} from "../../../global_types/coffee/ICoffee";
 import {getAsyncGoods} from "../../thunks/goodsThunk";
 
 
-
 type goodsListStateType = {
-    goodsList: iGood[]
+    goodsList: ICoffee[]
 }
 
 const initialState: goodsListStateType = {
@@ -19,8 +18,11 @@ export const goodsSlice = createSlice({
 
     },
     extraReducers: builder => {
-        builder.addCase(getAsyncGoods.fulfilled, (state:goodsListStateType, action:PayloadAction<iGood[]>) => {
+        builder.addCase(getAsyncGoods.fulfilled, (state:goodsListStateType, action:PayloadAction<ICoffee[]>) => {
             state.goodsList = action.payload
+            state.goodsList.map(good => {
+                good.quantity = 1
+            })
         })
     },
 })

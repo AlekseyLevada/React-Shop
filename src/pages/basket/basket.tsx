@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { iGood } from '../../global_types'
+import {ICoffee} from "../../global_types/coffee/ICoffee";
 import { BasketItem } from "../../components/basket_item"
 import { OrderFormBlock } from "../../components/order_form_block"
 import { StyledBasketContainer } from "./style"
@@ -15,7 +15,7 @@ export const Basket:FC = ():JSX.Element => {
                 Корзина заказов
             </h3>
             {
-                basket.map((good: iGood, index: number) => <BasketItem { ...good } key={ index } />)
+                basket.map((good:ICoffee, index: number) => <BasketItem good={good} key={ index+good.title} />)
             }
             {
                 basket.length > 0 ? <OrderFormBlock /> : <p>'Ваша корзина пуста'</p>

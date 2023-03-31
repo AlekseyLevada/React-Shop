@@ -1,7 +1,8 @@
 import { FC } from "react";
-import { iGood } from "../../global_types";
+import {BasketItemPropsState} from "./types/basketItemPropsState";
 import { useAppDispatch } from "../../store/hooks";
 import { deleteGoodFromBasket } from "../../store/slices/basket/basketSlice";
+import {decrementGoodCount, incrementGoodCount} from "../../store/slices/basket/basketSlice";
 import {
   StyledBasketItemContainer,
   StyledBasketCloseItem,
@@ -12,28 +13,30 @@ import {
   StyledDecCounterButton,
 } from "./style";
 
-export const BasketItem: FC<iGood> = (data: iGood): JSX.Element => {
+
+export const BasketItem:FC<BasketItemPropsState> = (props:BasketItemPropsState): JSX.Element => {
+  const {good} = props
   const dispatch = useAppDispatch();
 
   return (
     <StyledBasketItemContainer>
       <StyledBasketItemCard>
-        <img src={data.IMG} alt="basket_item_image" />
-        <p>{data.TITLE}</p>
+        <img src={good.image} alt="basket_item_image" />
+        <p>{good.title}</p>
         <StyledCounterContainer>
-          {/*<StyledDecCounterButton disabled={data.QUANTITY === 1 ? true : false} onClick={() => dispatch(changeGoodCount('-', data))}>*/}
-          {/*</StyledDecCounterButton>*/}
-          <span>{data.QUANTITY}</span>
-          {/*<StyledIncCounterButton onClick={() => dispatch(changeGoodCount('+', data))}>*/}
-          {/*</StyledIncCounterButton>*/}
+          <StyledDecCounterButton disabled={good.quantity === 1 ? true : false} onClick={() => dispatch(decrementGoodCount(good))}>
+          </StyledDecCounterButton>
+          <span>{good.quantity}</span>
+          <StyledIncCounterButton onClick={() => dispatch(incrementGoodCount(good))}>
+          </StyledIncCounterButton>
         </StyledCounterContainer>
-        <p>{data.DISCR}</p>
+        <p>{good.description}</p>
         <StyledBasketCloseItem
-          onClick={() => dispatch(deleteGoodFromBasket(data))}
+          onClick={() => dispatch(deleteGoodFromBasket(good))}
         ></StyledBasketCloseItem>
       </StyledBasketItemCard>
       <StyledBasketItemTotalPrice>
-        Итого: {data.TOTAL_PRICE} руб.
+        Итого: {good.total_price} руб.
       </StyledBasketItemTotalPrice>
     </StyledBasketItemContainer>
   );

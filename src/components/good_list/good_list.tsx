@@ -2,6 +2,7 @@ import {FC, useEffect} from "react";
 import goodsJSON from "../../stub/goods.json";
 import { GoodItem } from "../good_item";
 import { iGood } from "../../global_types";
+import {ICoffee} from '../../global_types/coffee/ICoffee'
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import { getAsyncGoods } from "../../store/thunks/goodsThunk";
 import {
@@ -18,10 +19,10 @@ export const GoodList:FC = (): JSX.Element => {
     dispatch(getAsyncGoods());
   }, []);
 
-    const goods = goodsJSON;
+    //const goods = goodsJSON;
 
     // Санки для товаров с API
-    //const goods = useAppSelector(state => state.goods.goodsList)
+    const goods = useAppSelector(state => state.goods.goodsList)
 
   return (
     <StyledGoodListContainer>
@@ -30,7 +31,7 @@ export const GoodList:FC = (): JSX.Element => {
       </StyledSearchBlock>
       <StyledGoodListCardsContainer>
           {
-              goods.map((good:iGood, index:number) =>
+              goods.map((good:ICoffee, index:number) =>
                   <StyledGoodListItem key={index}>
                       <GoodItem good={good}/>
                   </StyledGoodListItem>

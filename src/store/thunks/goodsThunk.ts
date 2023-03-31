@@ -2,7 +2,7 @@ import {createAsyncThunk} from "@reduxjs/toolkit";
 
 export const getAsyncGoods = createAsyncThunk('goods/getAsyncGoods',
     async () => {
-        const  response = await fetch('http://localhost:3001/goods/get')
+        const  response = await fetch('https://api.sampleapis.com/coffee/hot')
             .then(res => res.json())
             .then(data => data);
         return response
