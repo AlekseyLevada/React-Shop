@@ -3,7 +3,8 @@ export type ICoffee = {
     id: number
     image: string
     title: string
+    price: number
     quantity: number
-    total_price: number
+    total_price: number | null
     ingredients?: []
 }

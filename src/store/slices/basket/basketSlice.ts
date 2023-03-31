@@ -23,6 +23,7 @@ export const basketSlice = createSlice({
             state.basket.map(good => {
                 if (good.id === action.payload.id) {
                     good.quantity -= 1
+                    good.total_price = good.price * good.quantity
                 }
             })
         },
@@ -30,6 +31,7 @@ export const basketSlice = createSlice({
             state.basket.map(good => {
                 if (good.id === action.payload.id) {
                     good.quantity += 1
+                    good.total_price = good.price * good.quantity
                 }
             })
         },
