@@ -2,15 +2,17 @@ import styled from "styled-components"
 
 export const StyledGoodListItem = styled.div`
   cursor: pointer;
-  flex-basis: 300px;
-  flex-grow: 1;
+  flex-basis: 250px;
+  max-width: 300px;
   border-radius: 5px;
-  transition: .3s; 
+  flex-grow: 1;
+  transition: .3s;
     &:hover{
-      box-shadow: 0px 0px 5px #2A284E, inset 0px 0px 3px #2A284E;
+      box-shadow: 0px 0px 5px #2A284E;
       transition: 0.3s;
     }
     p{
-        margin: 10px;
+      width: 80%;
+      margin: 10px auto;
     }
 `

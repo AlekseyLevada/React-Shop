@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { iGood } from "../../global_types";
-import { useAppDispatch } from "../../main_store/hooks";
-import { deleteGoodFromBasket } from "../../main_store/slices/basket/basketSlice";
+import { useAppDispatch } from "../../store/hooks";
+import { deleteGoodFromBasket } from "../../store/slices/basket/basketSlice";
 import {
   StyledBasketItemContainer,
   StyledBasketCloseItem,

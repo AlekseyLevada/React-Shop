@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const StyledGoodListCardsContainer = styled.div`
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
-  gap: 30px;
-  justify-content: space-between;
-  align-content: center;
+  gap: 10px;
+  justify-content: start;
+  align-content: start;
   flex-wrap: wrap;
 `

@@ -16,6 +16,9 @@ box-shadow: 0px 0px 5px #2A284F;
             font-family:'Pacifico', cursive;
             font-size: 30px;
             text-shadow: 0px 0px 5px #FFCA05;
+            @media(max-width: 780px) {
+              display: none;
+            }
                 a {
                     text-decoration: none;
                     color: #F3C17F;

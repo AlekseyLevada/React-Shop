@@ -1,7 +1,7 @@
 import {FC, useState} from "react";
 import { Link } from "react-router-dom";
-import {useAppDispatch, useAppSelector} from "../../main_store/hooks";
-import {addGoodToBasket} from "../../main_store/slices/basket/basketSlice";
+import {useAppDispatch, useAppSelector} from "../../store/hooks";
+import {addGoodToBasket} from "../../store/slices/basket/basketSlice";
 import {GoodItemPropsState} from "./types/GoodsItemPropsState";
 import {
   StyledGoodItem,

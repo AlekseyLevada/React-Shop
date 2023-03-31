@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { StyledNavbar, StyledNavbarLinks, StyledNavbarButtons } from "./style";
-import { useAppSelector } from "../../main_store/hooks";
+import { useAppSelector } from "../../store/hooks";
 
 export const Navbar: FC = (): JSX.Element => {
 

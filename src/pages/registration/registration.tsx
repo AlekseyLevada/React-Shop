@@ -2,7 +2,7 @@ import { StyledRegForm } from './style'
 import { StyledRegistrationContainer } from './style'
 // import { useAppDispatch } from '../../store'
 // import { createExtraActions } from '../../store/actions/goods'
-import {useAppDispatch} from "../../main_store/hooks";
+import {useAppDispatch} from "../../store/hooks";
 
 //const { regNewUser } = createExtraActions()
 

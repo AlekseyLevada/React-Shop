@@ -2,9 +2,9 @@ import { FC, useState, useEffect } from 'react'
 import { useParams, Link } from "react-router-dom"
 import goodsJSON from '../../stub/goods.json'
 import { StyledDetailedGoodContainer, StyledDetailedGoodCard, StyledDetailedGoodButtonsContainer } from './style'
-import {useAppDispatch, useAppSelector} from "../../main_store/hooks";
+import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import { iGood } from '../../global_types'
-import {addGoodToBasket} from "../../main_store/slices/basket/basketSlice";
+import {addGoodToBasket} from "../../store/slices/basket/basketSlice";
 
 
 export const DetailedGood:FC = (): JSX.Element => {

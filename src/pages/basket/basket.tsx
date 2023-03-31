@@ -3,7 +3,7 @@ import { iGood } from '../../global_types'
 import { BasketItem } from "../../components/basket_item"
 import { OrderFormBlock } from "../../components/order_form_block"
 import { StyledBasketContainer } from "./style"
-import {useAppSelector} from "../../main_store/hooks";
+import {useAppSelector} from "../../store/hooks";
 
 export const Basket:FC = ():JSX.Element => {
 
