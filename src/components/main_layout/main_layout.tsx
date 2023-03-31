@@ -10,7 +10,7 @@ export const MainLayout:FC = ():JSX.Element => {
         <StyledMainLayout>
             <Clock />
             <Navbar/>
-            <Outlet />
+            <Outlet/>
         </StyledMainLayout>
     )
 }

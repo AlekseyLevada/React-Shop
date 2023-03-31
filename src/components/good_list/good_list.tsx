@@ -19,6 +19,8 @@ export const GoodList:FC = (): JSX.Element => {
   }, []);
 
     const goods = goodsJSON;
+
+    // Санки для товаров с API
     //const goods = useAppSelector(state => state.goods.goodsList)
 
   return (
@@ -27,11 +29,13 @@ export const GoodList:FC = (): JSX.Element => {
         <input type="text" placeholder="Что вы ищите...?" name="search" />
       </StyledSearchBlock>
       <StyledGoodListCardsContainer>
-        {goods.map((good: iGood, index: number) => (
-          <StyledGoodListItem key={index}>
-            <GoodItem {...good} />
-          </StyledGoodListItem>
-        ))}
+          {
+              goods.map((good:iGood, index:number) =>
+                  <StyledGoodListItem key={index}>
+                      <GoodItem good={good}/>
+                  </StyledGoodListItem>
+              )
+          }
       </StyledGoodListCardsContainer>
     </StyledGoodListContainer>
   );

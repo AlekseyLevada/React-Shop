@@ -11,10 +11,19 @@ export const DetailedGood:FC = (): JSX.Element => {
     const { id } = useParams()
     const dispatch = useAppDispatch()
 
-    const [good, setGood] = useState<iGood>({TITLE: '', DISCR: '', COUNT: '', PRICE: '', IMG: ''})
+    const [good, setGood] = useState<iGood>({
+        ID: '',
+        TITLE: '',
+        DISCR: '',
+        PRICE: '',
+        IMG: '',
+        COUNT: '',
+        QUANTITY: null,
+        TOTAL_PRICE: null,
+    })
 
     useEffect(() => {
-        const good: iGood = goodsJSON.find((good: iGood) => good.ID === id) as iGood
+        const good = goodsJSON.find((good: iGood) => good.ID === id) as iGood
         setGood(good)
     }, [])
 
@@ -43,9 +52,6 @@ export const DetailedGood:FC = (): JSX.Element => {
                                 Назад к списку
                             </button>
                         </Link>
-                        <button onClick={() => dispatch(addGoodToBasket(good))}>
-                            Добавить в корзину
-                        </button>
                     </StyledDetailedGoodButtonsContainer>
                 </div>
             </StyledDetailedGoodCard>

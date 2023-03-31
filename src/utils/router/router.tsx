@@ -5,7 +5,6 @@ import { createBrowserRouter, createHashRouter } from "react-router-dom"
 
 import { MainLayout } from "../../components/main_layout"
 import { GoodList } from "../../components/good_list"
-
 import { RegistrationPage } from "../../pages/registration"
 import { AuthenticationPage } from '../../pages/authentication'
 import { Main } from "../../pages/main"
