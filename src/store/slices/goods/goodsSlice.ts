@@ -23,7 +23,7 @@ export const goodsSlice = createSlice({
             state.goodsList.map(good => {
                 good.quantity = 1
                 good.price = 90
-                good.total_price = good.price * good.quantity
+                good.total_price = good.quantity * good.price
             })
         })
     },

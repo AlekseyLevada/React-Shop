@@ -1,10 +1,10 @@
 export type ICoffee = {
     description: string
-    id: number
+    id: number | null
     image: string
     title: string
-    price: number
-    quantity: number
-    total_price: number | null
+    price: number |  null
+    quantity?: number
+    total_price?: number
     ingredients?: []
 }

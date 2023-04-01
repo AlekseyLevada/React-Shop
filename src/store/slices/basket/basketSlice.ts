@@ -20,18 +20,18 @@ export const basketSlice = createSlice({
             state.basket = state.basket.filter((good:ICoffee) => action.payload.id !== good.id)
         },
         decrementGoodCount: (state:basketStateType, action:PayloadAction<ICoffee>) => {
-            state.basket.map(good => {
+            state.basket.map((good:ICoffee) => {
                 if (good.id === action.payload.id) {
-                    good.quantity -= 1
-                    good.total_price = good.price * good.quantity
+                    good.quantity! -= 1
+                    good.total_price = good.price! * good.quantity!
                 }
             })
         },
         incrementGoodCount: (state:basketStateType, action:PayloadAction<ICoffee>) => {
-            state.basket.map(good => {
+            state.basket.map((good:ICoffee) => {
                 if (good.id === action.payload.id) {
-                    good.quantity += 1
-                    good.total_price = good.price * good.quantity
+                    good.quantity! += 1
+                    good.total_price = good.price! * good.quantity!
                 }
             })
         },
