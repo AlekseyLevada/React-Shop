@@ -28,6 +28,6 @@ export const StyledDetailedGoodInfo = styled.div`
   }
   p{
     text-align: justify;
-    margin: 10px;
+    margin: 10px auto;
   }
 `

@@ -4,10 +4,11 @@ import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {addGoodToBasket} from "../../store/slices/basket/basketSlice";
 import {GoodItemPropsState} from "./types/GoodsItemPropsState";
 import {
-  StyledGoodItem,
-  StyledButtonContainer,
-  StyledImg,
-  StyledTitle,
+    StyledGoodItem,
+    StyledButtonContainer,
+    StyledImg,
+    StyledTitle,
+    StyledGoodItemImageContainer,
 } from "./style";
 
 export const GoodItem: FC<GoodItemPropsState> = (props:GoodItemPropsState): JSX.Element => {
@@ -24,7 +25,9 @@ export const GoodItem: FC<GoodItemPropsState> = (props:GoodItemPropsState): JSX.
       <StyledTitle>
           {good.title}
       </StyledTitle>
-      <StyledImg src={good.image} alt="product_image" />
+        <StyledGoodItemImageContainer>
+            <StyledImg src={good.image} alt="product_image" />
+        </StyledGoodItemImageContainer>
       <StyledButtonContainer>
         <Link to={`/goods/${good.id}`}>
           <button>Подробнее</button>
