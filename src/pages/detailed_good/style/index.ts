@@ -1,3 +1,5 @@
-export { StyledDetailedGoodContainer } from './styled_detailed_good_container.style'
-export { StyledDetailedGoodCard } from './styled_detailed_good_card.style'
-export { StyledDetailedGoodButtonsContainer } from './styled_detailed_good_buttons_container.style'
+export { StyledDetailedGoodContainer } from './styled_detailed_good_container'
+export { StyledDetailedGoodCard } from './styled_detailed_good_card'
+export { StyledDetailedGoodButtonsContainer } from './styled_detailed_good_buttons_container'
+export {StyledDetailedGoodImage} from './styled_detailed_good_card_image'
+export {StyledDetailedGoodInfo} from './styled_detailed_good_info'

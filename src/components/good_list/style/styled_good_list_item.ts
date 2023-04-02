@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const StyledGoodListItem = styled.div`
   cursor: pointer;
-  flex-basis: 250px;
-  max-width: 300px;
+  flex-basis: 30%;
+  max-width: 100%;
   border-radius: 5px;
   flex-grow: 1;
   transition: .3s;

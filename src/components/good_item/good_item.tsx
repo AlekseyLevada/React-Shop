@@ -25,12 +25,6 @@ export const GoodItem: FC<GoodItemPropsState> = (props:GoodItemPropsState): JSX.
           {good.title}
       </StyledTitle>
       <StyledImg src={good.image} alt="product_image" />
-      <p>
-          {good.description}
-      </p>
-      <p>
-          {/*Колличество на складе {good.COUNT}*/}
-      </p>
       <StyledButtonContainer>
         <Link to={`/goods/${good.id}`}>
           <button>Подробнее</button>

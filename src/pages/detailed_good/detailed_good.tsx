@@ -6,6 +6,8 @@ import {
   StyledDetailedGoodContainer,
   StyledDetailedGoodCard,
   StyledDetailedGoodButtonsContainer,
+  StyledDetailedGoodImage,
+  StyledDetailedGoodInfo,
 } from "./style";
 
 
@@ -31,19 +33,19 @@ export const DetailedGood:FC = ():JSX.Element => {
   return (
     <StyledDetailedGoodContainer>
       <StyledDetailedGoodCard>
-        <div>
+        <StyledDetailedGoodImage>
           <img src={good.image} alt="good_image" />
-        </div>
-        <div>
+        </StyledDetailedGoodImage>
+        <StyledDetailedGoodInfo>
           <h2>{good.title}</h2>
-          <h3>{good.description}</h3>
-          <h3>Цена: {good.price}</h3>
+          <p>{good.description}</p>
+          <p>Цена: {good.price}</p>
           <StyledDetailedGoodButtonsContainer>
             <Link to={`/`}>
               <button>Назад к списку</button>
             </Link>
           </StyledDetailedGoodButtonsContainer>
-        </div>
+        </StyledDetailedGoodInfo>
       </StyledDetailedGoodCard>
     </StyledDetailedGoodContainer>
   );
