@@ -5,4 +5,7 @@ export const StyledButtonContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 10px;
+  @media(max-width: 540px) {
+    padding: 0px;
+  }
 `
