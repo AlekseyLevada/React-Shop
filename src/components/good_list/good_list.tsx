@@ -1,9 +1,9 @@
-import {FC, useEffect} from "react";
+import { FC, useEffect } from "react";
 import goodsJSON from "../../stub/goods.json";
 import { GoodItem } from "../good_item";
 import { iGood } from "../../global_types";
-import {ICoffee} from '../../global_types/coffee/ICoffee'
-import {useAppDispatch, useAppSelector} from "../../store/hooks";
+import { ICoffee } from '../../global_types/coffee/ICoffee'
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { getAsyncGoods } from "../../store/thunks/goodsThunk";
 import {
   StyledGoodListItem,
@@ -12,17 +12,17 @@ import {
   StyledSearchBlock,
 } from "./style";
 
-export const GoodList:FC = (): JSX.Element => {
+export const GoodList: FC = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(getAsyncGoods());
   }, []);
 
-    //const goods = goodsJSON;
+  //const goods = goodsJSON;
 
-    // Санки для товаров с API
-    const goods = useAppSelector(state => state.goods.goodsList)
+  // Санки для товаров с API
+  const goods = useAppSelector(state => state.goods.goodsList)
 
   return (
     <StyledGoodListContainer>
@@ -30,13 +30,13 @@ export const GoodList:FC = (): JSX.Element => {
         <input type="text" placeholder="Что вы ищите...?" name="search" />
       </StyledSearchBlock>
       <StyledGoodListCardsContainer>
-          {
-              goods.map((good:ICoffee, index:number) =>
-                  <StyledGoodListItem key={index}>
-                      <GoodItem good={good}/>
-                  </StyledGoodListItem>
-              )
-          }
+        {
+          goods.map((good: ICoffee, index: number) =>
+            <StyledGoodListItem key={index}>
+              <GoodItem good={good} />
+            </StyledGoodListItem>
+          )
+        }
       </StyledGoodListCardsContainer>
     </StyledGoodListContainer>
   );

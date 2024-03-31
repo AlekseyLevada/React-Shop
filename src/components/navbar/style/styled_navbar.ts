@@ -12,10 +12,12 @@ font-size: 14px;
 font-weight: bold;
 list-style: none;
 box-shadow: 0px 0px 5px #2A284F;
+
   @media(max-width: 540px) {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
+
         h1{
             font-family:'Pacifico', cursive;
             font-size: 30px;

@@ -5,10 +5,10 @@ export const HelloBlock:FC = ():JSX.Element => {
     return(
         <StyledHelloBlock>
             <h2>
-                Добро пожаловать в iNordic Shop
+                Добро пожаловать в&nbsp;iNordic&nbsp;Shop
             </h2>
             <h3>
-                Сеть магазинов вкусного кофе в Норвегии Эстонии и Швеции
+                Сеть магазинов вкусного кофе из&nbsp;Норвегии Эстонии и&nbsp;Швеции
             </h3>
         </StyledHelloBlock>
     )

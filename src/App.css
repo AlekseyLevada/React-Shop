@@ -11,11 +11,15 @@ button {
     border: none;
     border-radius: 3px;
     background: #2A284E;
-    color: #FCBE74;                                      
+    color: #FCBE74;
     transition: .2s;
 }
 
 button:hover {
     transition: .2s;
     color: #FFF;
+}
+
+.App {
+    min-width: 320px;
 }
