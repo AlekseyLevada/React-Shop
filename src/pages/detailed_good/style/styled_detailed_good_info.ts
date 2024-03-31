@@ -1,33 +1,30 @@
 import styled from "styled-components";
 
 export const StyledDetailedGoodInfo = styled.div`
-  flex-basis: 300px;
-  flex-grow: 1;
-  h2 {
-    width: fit-content;
-    font-size: 25px;
-    margin: 10px auto;
-    text-align: center;
-    position: relative;
+h2 {
+  font-weight: 700;
+  font-size:24px;
+  line-height: 1.2;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 20px auto;
+  position: relative;
 
-    &:first-letter {
-      color: tomato;
-    }
-
-    &:before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      background-color: tomato;
-      border-radius: 50%;
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: tomato;
   }
-  p{
-    text-align: justify;
-    margin: 10px auto;
-  }
+}
+p {
+  margin-bottom: 20px;
+  text-align: start;
+  font-size: 18px;
+  line-height: 24px;
+}
 `

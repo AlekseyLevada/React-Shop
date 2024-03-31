@@ -7,11 +7,12 @@ button {
     font-weight: bold;
     cursor: pointer;
     padding: 10px;
-    margin: 0px 10px;
     border: none;
     border-radius: 3px;
     background: #2A284E;
     color: #FCBE74;
+    height: 45px;
+    font-size: 14px;
     transition: .2s;
 }
 
