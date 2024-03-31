@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledAboutPageContainer = styled.div`
-    padding: 10px 50px;
+    padding: 20px 10px;
     text-align: justify;
     h3 {
         text-align: center;
