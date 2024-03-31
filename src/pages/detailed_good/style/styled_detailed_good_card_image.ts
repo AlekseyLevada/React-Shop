@@ -12,4 +12,11 @@ img {
   height: inherit;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 600px) {
+  align-self: center;
+  width: 150px;
+  height: 230px;
+  gap: 20px;
+}
 `
